@@ -10,7 +10,7 @@ var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 module.exports = {
 	context: path.join(__dirname, "src"),
 	entry: {
-		bundle: "./index.jsx",
+		bundle: "./index.js",
 		vendor: ["react"]
 	},
 	output: {
@@ -34,10 +34,14 @@ module.exports = {
 		{
 			test: /\.(png|jpg)$/,
 			loader: "url?limit=25000"
+		},
+		{
+			test: /\.json$/,
+			loader: "json-loader"
 		}]
 	},
 	resolve: {
-		extensions: ["", ".js", ".jsx", ".scss", ".less", ".css"],
+		extensions: ["", ".js", ".jsx", ".scss", ".less", ".css", "json"],
 	},
 	postcss: [autoprefixer],
 	plugins: [

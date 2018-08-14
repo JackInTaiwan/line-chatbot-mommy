@@ -21,7 +21,10 @@
     "url": "git+https://github.com/fondadam2016/reactjs-init"
   },
   "dependencies": {
-    "react": "^15.0.2"
+    "json-loader": "^0.5.7",
+    "rc-calendar": "^9.7.0",
+    "react": "^15.0.2",
+    "react-router-dom": "^4.3.1"
   },
   "license": "MIT",
   "devDependencies": {
