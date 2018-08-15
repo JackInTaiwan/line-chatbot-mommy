@@ -58,7 +58,17 @@ body {
 
 
 /* float-menu */
-.float-menu {
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0.85;
+  }
+}
+
+.float-panel {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -69,6 +79,8 @@ body {
   background-color: #ddaaaa;
   opacity: 0.85;
   width: 100%;
+  animation-name: fadeIn;
+  animation-duration: 0.5s;
 }
 
 .cateBlock {
