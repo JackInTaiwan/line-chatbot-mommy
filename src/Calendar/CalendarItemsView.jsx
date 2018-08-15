@@ -93,8 +93,8 @@ export class Item extends Component {
           color={this.colorMap[this.cate]}
           style={{marginLeft: 10}}
         />
-        <button className="cate-font">{this.cate}</button>
-        <button className="title-font">{this.title}</button>
+        <div className="cate-font">{this.cate}</div>
+        <div className="title-font">{this.title}</div>
       </button>
     );
   }

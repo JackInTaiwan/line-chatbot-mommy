@@ -10,7 +10,6 @@ body {
 }
 
 .calendar-page {
-  
   flex-direction: column;
   align-items: center;
   background-color: #ccffff;
@@ -44,12 +43,50 @@ body {
   background-color: #da330c;
   height: 50px;
   width: 100%;
+  border: 0px;
 }
 
 .cate-font {
+  margin: 10px;
   font-size: 16px;
 }
 
 .title-font {
+  margin: 10px;
   font-size: 16px;
+}
+
+
+/* float-menu */
+.float-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  background-color: #ddaaaa;
+  opacity: 0.85;
+  width: 100%;
+}
+
+.cateBlock {
+  position: absolute;
+  top: 30%;;
+  left: 25%;
+  width: 50%;
+}
+
+.cateButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7777;
+  width: 100%;
+  height: 60px;
+  margin-top : 20px;
+  border: 0px;
+  font-size: 14px;
 }

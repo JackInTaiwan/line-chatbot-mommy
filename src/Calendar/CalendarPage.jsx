@@ -3,6 +3,7 @@ import DayPicker from "react-day-picker";
 
 import CalendarItemsView from "./CalendarItemsView";
 import CalendarView from "./CalendarView";
+import FloatMenu from	"./FloatMenu";
 
 import "react-day-picker/lib/style.css";
 import "./styles.css";
@@ -26,17 +27,19 @@ export default class CalendarPage extends Component {
 				diary: [],
 			},
 			selectedDate: new Date(),
+			floatMenuToggle: false,
 		}
 	}
 	
 
 
 	render() {
-		console.log(this.state);
+		console.log(window.innerHeight)
 		return (
 				<div className="calendar-page">
 					<CalendarView parentPage={this} />
 					<CalendarItemsView data={this.state.data} selectedDate={this.state.selectedDate} />
+					{this.state.floatMenuToggle ? <FloatMenu /> : null }
 				</div>
     );
 	}

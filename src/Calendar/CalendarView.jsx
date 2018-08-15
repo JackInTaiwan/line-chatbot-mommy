@@ -18,7 +18,8 @@ library.add(
 export default class CalendarView extends Component {
 	constructor(props) {
 		super(props);
-		this.onDayClick = this.onDayClick.bind(this);
+    this.onDayClick = this.onDayClick.bind(this);
+    this.addButtonOnClick = this.addButtonOnClick.bind(this);
 	}
 
 
@@ -28,7 +29,16 @@ export default class CalendarView extends Component {
 			newState.selectedDate = day;
 			return newState;
 		})
-	}
+  }
+  
+
+  addButtonOnClick() {
+    this.props.parentPage.setState((prev) => {
+      let newState = prev;
+      newState.floatMenuToggle = ! prev.floatMenuToggle;
+      return newState;
+    })
+  }
 
 
 	render() {
@@ -66,7 +76,7 @@ export default class CalendarView extends Component {
 					modifiers={modifiers}
 					onDayClick={this.onDayClick}
 				/>
-				<button className="add-button" onClick={testOnClick}>
+				<button className="add-button" onClick={this.addButtonOnClick}>
 					<FontAwesomeIcon 
 						icon="plus-circle" 
 						size="2x"
