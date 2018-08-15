@@ -2,7 +2,6 @@ var webpack = require("webpack");
 var path = require("path");
 var autoprefixer = require("autoprefixer");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
-var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
 
@@ -26,11 +25,15 @@ module.exports = {
 		{
 			test: /\.less$/,
 			loader: "style!css!postcss!less"
-		}, 
+		},
+		// {
+		// 	test: /\.css/,
+		// 	loader: ExtractTextPlugin.extract("style", "css", "postcss")	
+		// },
 		{
-			test: /\.css/,
-			loader: ExtractTextPlugin.extract("style", "css", "postcss")	
-		}, 
+			test: /\.css$/, // Only .css files
+			loader: "style!css" // Run both loaders
+		},  
 		{
 			test: /\.(png|jpg)$/,
 			loader: "url?limit=25000"
@@ -41,7 +44,7 @@ module.exports = {
 		}]
 	},
 	resolve: {
-		extensions: ["", ".js", ".jsx", ".scss", ".less", ".css", "json"],
+		extensions: ["", ".js", ".jsx", ".scss", ".less", ".css", "json"]
 	},
 	postcss: [autoprefixer],
 	plugins: [

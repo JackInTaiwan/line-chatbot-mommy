@@ -1,0 +1,55 @@
+html {
+  display: flex;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.calendar-page {
+  
+  flex-direction: column;
+  align-items: center;
+  background-color: #ccffff;
+  width: 100%;
+}
+
+.calendar-view {
+  background-color: aqua;
+  width: 100%;
+}
+
+.calendar-items-view {
+  background-color: grey;
+  width: 100%;
+}
+
+.add-button {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: red;
+  width: 35px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #da330c;
+  height: 50px;
+  width: 100%;
+}
+
+.cate-font {
+  font-size: 16px;
+}
+
+.title-font {
+  font-size: 16px;
+}
