@@ -8,7 +8,7 @@ import FloatMenu from	"./FloatMenu";
 import "react-day-picker/lib/style.css";
 import "./styles.css";
 
-import { Animated } from "react-animated-css";
+
 
 export default class CalendarPage extends Component {
 	constructor(props) {
