@@ -7,10 +7,10 @@ var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
 
 module.exports = {
-	context: path.join(__dirname, "src"),
+	context: path.join(__dirname, "src_calendar"),
 	entry: {
-		bundle: "./index.js",
-		vendor: ["react"]
+		bundle_calendar: "./index.js",
+		vendor_calendar: ["react"]
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
@@ -54,7 +54,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, "src/index.html")
+			template: path.join(__dirname, "src_calendar/index.html")
 		}),
 		new OpenBrowserPlugin({ url: "http://localhost:8080" })
 	]
