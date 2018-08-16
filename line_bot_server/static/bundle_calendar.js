@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "558e7f4f37c501ac7389"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b1173cffc0610bd0a94a"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26347,8 +26347,18 @@
 						date: new Date(),
 						title: "test"
 					}],
-					reminder: [],
-					diary: []
+					reminder: [{
+						id: 2,
+						cate: "journal",
+						date: new Date(),
+						title: "test2"
+					}],
+					diary: [{
+						id: 3,
+						cate: "diary",
+						date: new Date(),
+						title: "test3"
+					}]
 				},
 				selectedDate: new Date(),
 				floatMenuToggle: false
@@ -28911,9 +28921,9 @@
 	    _this2.cate = _this2.item.cate;
 	    _this2.title = _this2.item.title;
 	    _this2.colorMap = {
-	      "journal": "#ffaabb",
-	      "reminder": "#aabb55",
-	      "diary": "#3329aa"
+	      "journal": "#f0698acc",
+	      "reminder": "#4b81be",
+	      "diary": "#5ac084"
 	    };
 	    return _this2;
 	  }
@@ -33284,7 +33294,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  display: flex;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n\n.calendar-page {\n  flex-direction: column;\n  align-items: center;\n  background-color: #ccffff;\n  width: 100%;\n}\n\n.calendar-view {\n  background-color: aqua;\n  width: 100%;\n}\n\n.calendar-items-view {\n  background-color: grey;\n  width: 100%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: red;\n  width: 35px;\n  height: 35px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  background-color: #da330c;\n  height: 50px;\n  width: 100%;\n  border: 0px;\n}\n\n.cate-font {\n  margin: 10px;\n  font-size: 16px;\n}\n\n.title-font {\n  margin: 10px;\n  font-size: 16px;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #ff7777;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n}", ""]);
+	exports.push([module.id, "html {\n  display: flex;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n\n.calendar-page {\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  width: 100%;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 100%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: #ffffffff;\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  /* background: linear-gradient(#cd330015,#cd330022); */\n  background-color: #cd330015;\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 16px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 16px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}", ""]);
 
 	// exports
 
@@ -33946,12 +33956,14 @@
 		}, {
 			key: "render",
 			value: function render() {
-				var birthdayStyle = ".DayPicker-Day--highlighted {\n\t\t\tbackground-color: orange;\n\t\t\tcolor: white;\n\t\t}";
-				var birthday2Style = ".DayPicker-Day--selec {\n\t\t\tbackground-color: blue;\n\t\t\tcolor: white;\n\t\t}";
+				var journalStyle = ".DayPicker-Day--journal {\n\t\t\tbackground-color: #f0698acc;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
+				var reminderStyle = ".DayPicker-Day--reminder {\n\t\t\tbackground-color: #4b81be;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
+				var diaryStyle = ".DayPicker-Day--diary {\n\t\t\tbackground-color: #5ac084;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
 
 				var modifiers = {
-					highlighted: [new Date(2018, 7, 15), new Date(2018, 7, 16)],
-					selec: [new Date(2018, 7, 17)]
+					journal: [new Date(2018, 7, 15)],
+					reminder: [new Date(2018, 7, 17)],
+					diary: [new Date(2018, 7, 20)]
 				};
 
 				var testOnClick = function testOnClick() {
@@ -33964,20 +33976,23 @@
 					_react2.default.createElement(
 						"style",
 						null,
-						birthdayStyle
+						journalStyle
 					),
 					_react2.default.createElement(
 						"style",
 						null,
-						birthday2Style
+						reminderStyle
+					),
+					_react2.default.createElement(
+						"style",
+						null,
+						diaryStyle
 					),
 					_react2.default.createElement(_reactDayPicker2.default, {
-						showOutsideDays: true,
-						todayButton: "Go to Today",
-						onTodayButtonClick: function onTodayButtonClick(day, modifiers) {
-							return console.log(day, modifiers);
-						},
-						modifiers: modifiers,
+						showOutsideDays: true
+						// todayButton="Go to Today"
+						// onTodayButtonClick={(day, modifiers) => console.log(day, modifiers)}
+						, modifiers: modifiers,
 						onDayClick: this.onDayClick
 					}),
 					_react2.default.createElement(

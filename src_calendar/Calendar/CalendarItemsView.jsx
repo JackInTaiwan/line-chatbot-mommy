@@ -75,9 +75,9 @@ export class Item extends Component {
     this.cate = this.item.cate
     this.title = this.item.title;
     this.colorMap = {
-      "journal": "#ffaabb",
-      "reminder": "#aabb55",
-      "diary": "#3329aa",
+      "journal": "#f0698acc",
+      "reminder": "#4b81be",
+      "diary": "#5ac084",
     }
   }
   

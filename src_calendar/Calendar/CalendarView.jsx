@@ -42,23 +42,33 @@ export default class CalendarView extends Component {
 
 
 	render() {
-		const birthdayStyle = `.DayPicker-Day--highlighted {
-			background-color: orange;
+		const journalStyle = `.DayPicker-Day--journal {
+			background-color: #f0698acc;
+			border-radius: 20px;
 			color: white;
 		}`;
-		const birthday2Style = `.DayPicker-Day--selec {
-			background-color: blue;
+		const reminderStyle = `.DayPicker-Day--reminder {
+			background-color: #4b81be;
+			border-radius: 20px;
+			color: white;
+		}`;
+		const diaryStyle = `.DayPicker-Day--diary {
+			background-color: #5ac084;
+			border-radius: 20px;
 			color: white;
 		}`;
 
 		const modifiers = {
-			highlighted: [
+			journal: [
 				new Date(2018, 7, 15),
-				new Date(2018, 7, 16)
+				//new Date(2018, 7, 16)
 			],
-			selec: [
-				new Date(2018, 7, 17)
-			]
+			reminder: [
+				new Date(2018, 7, 17),
+			],
+			diary: [
+				new Date(2018, 7, 20)
+			],
 		};
 
 		const testOnClick = ()=> {
@@ -67,12 +77,13 @@ export default class CalendarView extends Component {
 
 		return (
 			<div className="calendar-view">
-				<style>{birthdayStyle}</style>
-				<style>{birthday2Style}</style>
+				<style>{journalStyle}</style>
+				<style>{reminderStyle}</style>
+				<style>{diaryStyle}</style>
 				<DayPicker
 					showOutsideDays={true}
-					todayButton="Go to Today"
-					onTodayButtonClick={(day, modifiers) => console.log(day, modifiers)}
+					// todayButton="Go to Today"
+					// onTodayButtonClick={(day, modifiers) => console.log(day, modifiers)}
 					modifiers={modifiers}
 					onDayClick={this.onDayClick}
 				/>

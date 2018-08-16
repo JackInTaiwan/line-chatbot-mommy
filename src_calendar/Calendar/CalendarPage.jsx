@@ -23,8 +23,22 @@ export default class CalendarPage extends Component {
 						title: "test",
 					}
 				],
-				reminder: [],
-				diary: [],
+				reminder: [
+					{
+						id:2,
+						cate: "journal",
+						date: new Date(),
+						title: "test2",
+					},
+				],
+				diary: [
+					{
+						id:3,
+						cate: "diary",
+						date: new Date(),
+						title: "test3",
+					}
+				],
 			},
 			selectedDate: new Date(),
 			floatMenuToggle: false,
