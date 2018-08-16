@@ -20,15 +20,15 @@ export default class CalendarPage extends Component {
 						id:0,
 						cate: "journal",
 						date: new Date(),
-						title: "test",
+						title: "第一次產檢",
 					}
 				],
 				reminder: [
 					{
 						id:2,
-						cate: "journal",
+						cate: "reminder",
 						date: new Date(),
-						title: "test2",
+						title: "和爸爸一起去吃情人節",
 					},
 				],
 				diary: [
@@ -36,7 +36,7 @@ export default class CalendarPage extends Component {
 						id:3,
 						cate: "diary",
 						date: new Date(),
-						title: "test3",
+						title: "Suck day with ex-boyfriend",
 					}
 				],
 			},

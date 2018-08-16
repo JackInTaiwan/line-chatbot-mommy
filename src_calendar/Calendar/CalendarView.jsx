@@ -43,17 +43,23 @@ export default class CalendarView extends Component {
 
 	render() {
 		const journalStyle = `.DayPicker-Day--journal {
-			background-color: #f0698acc;
+			background-color: #f38ac4;
+			height: 20px;
+			width: 20px;
 			border-radius: 20px;
 			color: white;
 		}`;
 		const reminderStyle = `.DayPicker-Day--reminder {
 			background-color: #4b81be;
+			height: 20px;
+			width: 20px;
 			border-radius: 20px;
 			color: white;
 		}`;
 		const diaryStyle = `.DayPicker-Day--diary {
 			background-color: #5ac084;
+			height: 20px;
+			width: 20px;
 			border-radius: 20px;
 			color: white;
 		}`;
@@ -82,8 +88,6 @@ export default class CalendarView extends Component {
 				<style>{diaryStyle}</style>
 				<DayPicker
 					showOutsideDays={true}
-					// todayButton="Go to Today"
-					// onTodayButtonClick={(day, modifiers) => console.log(day, modifiers)}
 					modifiers={modifiers}
 					onDayClick={this.onDayClick}
 				/>

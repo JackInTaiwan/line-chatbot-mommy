@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b1173cffc0610bd0a94a"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "8d01c04f0616fbed6de6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -597,15 +597,20 @@
 
 	var _CalendarPage2 = _interopRequireDefault(_CalendarPage);
 
+	var _JournalPage = __webpack_require__(257);
+
+	var _JournalPage2 = _interopRequireDefault(_JournalPage);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _reactDom.render)(_react2.default.createElement(
 	    _reactRouterDom.BrowserRouter,
-	    { basename: "/" },
+	    null,
 	    _react2.default.createElement(
 	        _reactRouterDom.Switch,
 	        null,
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/", component: _CalendarPage2.default })
+	        _react2.default.createElement(_reactRouterDom.Route, { path: "/", exact: true, component: _CalendarPage2.default }),
+	        _react2.default.createElement(_reactRouterDom.Route, { path: "/journal", component: _JournalPage2.default })
 	    )
 	), document.getElementById("container"));
 
@@ -33294,7 +33299,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  display: flex;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n\n.calendar-page {\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  width: 100%;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 100%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: #ffffffff;\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  /* background: linear-gradient(#cd330015,#cd330022); */\n  background-color: #cd330015;\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 16px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 16px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}", ""]);
+	exports.push([module.id, "html {\n  display: flex;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n\n.calendar-page {\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  width: 100%;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 100%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: rgba(255,255,255,255);\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  /* background: linear-gradient(#cd330015,#cd330022); */\n  background-color: rgba(205, 51, 0, 0.133);\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 16px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 16px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}", ""]);
 
 	// exports
 
@@ -33956,9 +33961,9 @@
 		}, {
 			key: "render",
 			value: function render() {
-				var journalStyle = ".DayPicker-Day--journal {\n\t\t\tbackground-color: #f0698acc;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
-				var reminderStyle = ".DayPicker-Day--reminder {\n\t\t\tbackground-color: #4b81be;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
-				var diaryStyle = ".DayPicker-Day--diary {\n\t\t\tbackground-color: #5ac084;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
+				var journalStyle = ".DayPicker-Day--journal {\n\t\t\tbackground-color: #f38ac4;\n\t\t\theight: 20px;\n\t\t\twidth: 20px;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
+				var reminderStyle = ".DayPicker-Day--reminder {\n\t\t\tbackground-color: #4b81be;\n\t\t\theight: 20px;\n\t\t\twidth: 20px;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
+				var diaryStyle = ".DayPicker-Day--diary {\n\t\t\tbackground-color: #5ac084;\n\t\t\theight: 20px;\n\t\t\twidth: 20px;\n\t\t\tborder-radius: 20px;\n\t\t\tcolor: white;\n\t\t}";
 
 				var modifiers = {
 					journal: [new Date(2018, 7, 15)],
@@ -33989,10 +33994,8 @@
 						diaryStyle
 					),
 					_react2.default.createElement(_reactDayPicker2.default, {
-						showOutsideDays: true
-						// todayButton="Go to Today"
-						// onTodayButtonClick={(day, modifiers) => console.log(day, modifiers)}
-						, modifiers: modifiers,
+						showOutsideDays: true,
+						modifiers: modifiers,
 						onDayClick: this.onDayClick
 					}),
 					_react2.default.createElement(
@@ -34093,6 +34096,8 @@
 
 	var _react2 = _interopRequireDefault(_react);
 
+	var _reactRouterDom = __webpack_require__(184);
+
 	__webpack_require__(248);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -34126,9 +34131,13 @@
 	          "div",
 	          { className: "cateBlock" },
 	          _react2.default.createElement(
-	            "button",
-	            { className: "cateButton" },
-	            "\u5ABD\u5ABD\u624B\u518A"
+	            _reactRouterDom.Link,
+	            { to: "/journal" },
+	            _react2.default.createElement(
+	              "button",
+	              { className: "cateButton" },
+	              "\u5ABD\u5ABD\u624B\u518A"
+	            )
 	          ),
 	          _react2.default.createElement(
 	            "button",
@@ -34149,6 +34158,278 @@
 	}(_react.Component);
 
 	exports.default = FloatMenu;
+
+/***/ },
+/* 257 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactRouterDom = __webpack_require__(184);
+
+	var _JournalHeaderView = __webpack_require__(258);
+
+	var _JournalHeaderView2 = _interopRequireDefault(_JournalHeaderView);
+
+	var _JournalPhotoView = __webpack_require__(261);
+
+	var _JournalPhotoView2 = _interopRequireDefault(_JournalPhotoView);
+
+	var _JournalInputView = __webpack_require__(262);
+
+	var _JournalInputView2 = _interopRequireDefault(_JournalInputView);
+
+	__webpack_require__(259);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var JournalPage = function (_Component) {
+	  _inherits(JournalPage, _Component);
+
+	  function JournalPage(props) {
+	    _classCallCheck(this, JournalPage);
+
+	    return _possibleConstructorReturn(this, (JournalPage.__proto__ || Object.getPrototypeOf(JournalPage)).call(this, props));
+	  }
+
+	  _createClass(JournalPage, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "journal-page" },
+	        _react2.default.createElement(_JournalHeaderView2.default, null),
+	        _react2.default.createElement(_JournalPhotoView2.default, null),
+	        _react2.default.createElement(_JournalInputView2.default, null)
+	      );
+	    }
+	  }]);
+
+	  return JournalPage;
+	}(_react.Component);
+
+	exports.default = JournalPage;
+
+/***/ },
+/* 258 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(259);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var JournalHeaderView = function (_Component) {
+	  _inherits(JournalHeaderView, _Component);
+
+	  function JournalHeaderView(props) {
+	    _classCallCheck(this, JournalHeaderView);
+
+	    return _possibleConstructorReturn(this, (JournalHeaderView.__proto__ || Object.getPrototypeOf(JournalHeaderView)).call(this, props));
+	  }
+
+	  _createClass(JournalHeaderView, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement("div", null);
+	    }
+	  }]);
+
+	  return JournalHeaderView;
+	}(_react.Component);
+
+	exports.default = JournalHeaderView;
+
+/***/ },
+/* 259 */
+/***/ function(module, exports, __webpack_require__) {
+
+	
+	var content = __webpack_require__(260);
+
+	if(typeof content === 'string') content = [[module.id, content, '']];
+
+	var transform;
+	var insertInto;
+
+
+
+	var options = {"hmr":true}
+
+	options.transform = transform
+	options.insertInto = undefined;
+
+	var update = __webpack_require__(251)(content, options);
+
+	if(content.locals) module.exports = content.locals;
+
+	if(true) {
+		module.hot.accept(260, function() {
+			var newContent = __webpack_require__(260);
+
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+			var locals = (function(a, b) {
+				var key, idx = 0;
+
+				for(key in a) {
+					if(!b || a[key] !== b[key]) return false;
+					idx++;
+				}
+
+				for(key in b) idx--;
+
+				return idx === 0;
+			}(content.locals, newContent.locals));
+
+			if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+			update(newContent);
+		});
+
+		module.hot.dispose(function() { update(); });
+	}
+
+/***/ },
+/* 260 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(250)(false);
+	// imports
+
+
+	// module
+	exports.push([module.id, "", ""]);
+
+	// exports
+
+
+/***/ },
+/* 261 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(259);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var JournalPhotoView = function (_Component) {
+	  _inherits(JournalPhotoView, _Component);
+
+	  function JournalPhotoView(props) {
+	    _classCallCheck(this, JournalPhotoView);
+
+	    return _possibleConstructorReturn(this, (JournalPhotoView.__proto__ || Object.getPrototypeOf(JournalPhotoView)).call(this, props));
+	  }
+
+	  _createClass(JournalPhotoView, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement("div", null);
+	    }
+	  }]);
+
+	  return JournalPhotoView;
+	}(_react.Component);
+
+	exports.default = JournalPhotoView;
+
+/***/ },
+/* 262 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	__webpack_require__(259);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var JournalInputView = function (_Component) {
+	  _inherits(JournalInputView, _Component);
+
+	  function JournalInputView(props) {
+	    _classCallCheck(this, JournalInputView);
+
+	    return _possibleConstructorReturn(this, (JournalInputView.__proto__ || Object.getPrototypeOf(JournalInputView)).call(this, props));
+	  }
+
+	  _createClass(JournalInputView, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement("div", null);
+	    }
+	  }]);
+
+	  return JournalInputView;
+	}(_react.Component);
+
+	exports.default = JournalInputView;
 
 /***/ }
 /******/ ]);
