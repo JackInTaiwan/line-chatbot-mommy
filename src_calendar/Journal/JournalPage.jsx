@@ -11,13 +11,16 @@ import "./styles.css";
 
 export default class JournalPage extends Component {
 	constructor(props) {
-		super(props);
+    super(props);
+    this.date = this.props.location.state.date;
   }
 
   render() {
+    const windowHeight = window.innerHeight;
+    
     return(
-      <div className="journal-page">
-        <JournalHeadView />
+      <div className="journal-page" style={{height: windowHeight}}>
+        <JournalHeadView date={this.date}/>
         <JournalPhotoView />
         <JournalInputView />
       </div>

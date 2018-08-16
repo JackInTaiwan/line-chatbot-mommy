@@ -53,7 +53,7 @@ export default class CalendarPage extends Component {
 			<div className="calendar-page">
 				<CalendarView parentPage={this} />
 				<CalendarItemsView data={this.state.data} selectedDate={this.state.selectedDate} />
-				{this.state.floatMenuToggle ? <FloatMenu /> : null }
+				{this.state.floatMenuToggle ? <FloatMenu selectedDate={this.state.selectedDate}/> : null }
 			</div>
     );
 	}

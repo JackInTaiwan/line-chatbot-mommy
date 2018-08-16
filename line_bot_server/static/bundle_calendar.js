@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "8d01c04f0616fbed6de6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "b3052cf1bb0bbcf198f6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26350,19 +26350,19 @@
 						id: 0,
 						cate: "journal",
 						date: new Date(),
-						title: "test"
+						title: "第一次產檢"
 					}],
 					reminder: [{
 						id: 2,
-						cate: "journal",
+						cate: "reminder",
 						date: new Date(),
-						title: "test2"
+						title: "和爸爸一起去吃情人節"
 					}],
 					diary: [{
 						id: 3,
 						cate: "diary",
 						date: new Date(),
-						title: "test3"
+						title: "Suck day with ex-boyfriend"
 					}]
 				},
 				selectedDate: new Date(),
@@ -28948,11 +28948,6 @@
 	          color: this.colorMap[this.cate],
 	          style: { marginLeft: 10 }
 	        }),
-	        _react2.default.createElement(
-	          "div",
-	          { className: "cate-font" },
-	          this.cate
-	        ),
 	        _react2.default.createElement(
 	          "div",
 	          { className: "title-font" },
@@ -33299,7 +33294,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  display: flex;\n  width: 100%;\n}\n\nbody {\n  display: flex;\n  justify-content: center;\n  width: 100%;\n}\n\n.calendar-page {\n  flex-direction: column;\n  align-items: center;\n  width: 100%;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  width: 100%;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 100%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: rgba(255,255,255,255);\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  /* background: linear-gradient(#cd330015,#cd330022); */\n  background-color: rgba(205, 51, 0, 0.133);\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 16px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 16px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}", ""]);
+	exports.push([module.id, "body {\n  margin: 0px;\n  overflow: hidden;\n}\n\n.calendar-page {\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n  align-items: center;\n  margin-top: 20px;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  display: flex;\n  justify-content: center;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 80%;\n}\n\n.add-button {\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: rgba(255,255,255,255);\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  /* background: linear-gradient(#cd330015,#cd330022); */\n  background-color: rgba(205, 51, 0, 0.133);\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 14px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 14px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}\n\n.route-link {\n  text-decoration: none;\n}", ""]);
 
 	// exports
 
@@ -34121,7 +34116,6 @@
 	    key: "render",
 	    value: function render() {
 	      var windowHeight = window.innerHeight;
-	      console.log("float");
 
 	      return _react2.default.createElement(
 	        "div",
@@ -34132,7 +34126,7 @@
 	          { className: "cateBlock" },
 	          _react2.default.createElement(
 	            _reactRouterDom.Link,
-	            { to: "/journal" },
+	            { to: "/journal", className: "route-link" },
 	            _react2.default.createElement(
 	              "button",
 	              { className: "cateButton" },
@@ -34140,14 +34134,22 @@
 	            )
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "cateButton" },
-	            "\u4EE3\u8FA6\u4E8B\u9805"
+	            _reactRouterDom.Link,
+	            { to: "/reminder", className: "route-link" },
+	            _react2.default.createElement(
+	              "button",
+	              { className: "cateButton" },
+	              "\u4EE3\u8FA6\u4E8B\u9805"
+	            )
 	          ),
 	          _react2.default.createElement(
-	            "button",
-	            { className: "cateButton" },
-	            "\u65E5\u8A18"
+	            _reactRouterDom.Link,
+	            { to: "/diary", className: "route-link" },
+	            _react2.default.createElement(
+	              "button",
+	              { className: "cateButton" },
+	              "\u65E5\u8A18"
+	            )
 	          )
 	        )
 	      );
@@ -34211,9 +34213,11 @@
 	  _createClass(JournalPage, [{
 	    key: "render",
 	    value: function render() {
+	      var windowHeight = window.innerHeight;
+
 	      return _react2.default.createElement(
 	        "div",
-	        { className: "journal-page" },
+	        { className: "journal-page", style: { height: windowHeight } },
 	        _react2.default.createElement(_JournalHeaderView2.default, null),
 	        _react2.default.createElement(_JournalPhotoView2.default, null),
 	        _react2.default.createElement(_JournalInputView2.default, null)
@@ -34235,6 +34239,7 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	exports.Header = undefined;
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -34264,7 +34269,7 @@
 	  _createClass(JournalHeaderView, [{
 	    key: "render",
 	    value: function render() {
-	      return _react2.default.createElement("div", null);
+	      return _react2.default.createElement("div", { className: "journal-header-view" });
 	    }
 	  }]);
 
@@ -34272,6 +34277,29 @@
 	}(_react.Component);
 
 	exports.default = JournalHeaderView;
+
+	var Header = exports.Header = function (_Component2) {
+	  _inherits(Header, _Component2);
+
+	  function Header() {
+	    _classCallCheck(this, Header);
+
+	    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+	  }
+
+	  _createClass(Header, [{
+	    key: "render",
+	    value: function render() {
+	      return _react2.default.createElement(
+	        "div",
+	        { className: "header" },
+	        this.props.title
+	      );
+	    }
+	  }]);
+
+	  return Header;
+	}(_react.Component);
 
 /***/ },
 /* 259 */
@@ -34332,7 +34360,7 @@
 
 
 	// module
-	exports.push([module.id, "", ""]);
+	exports.push([module.id, ".journal-page {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  background-color: aquamarine;\n}\n\n.journal-header-view {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  background-color: red;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  font-size: 20px;\n  background-color: #f55252ea;\n  color: #ffffff;\n}", ""]);
 
 	// exports
 

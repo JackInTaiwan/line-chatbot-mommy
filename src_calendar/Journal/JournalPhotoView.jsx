@@ -10,7 +10,32 @@ export default class JournalPhotoView extends Component {
 
   render() {
     return(
-      <div></div>
+      <div className="journal-photo-view">
+        <PhotoBlock title={"超音波照片"} />
+        <PhotoBlock title={"媽咪肚肚照"} />
+      </div>
+    );
+  }
+}
+
+
+
+export class PhotoBlock extends Component {
+  constructor(props){
+    super(props);
+
+    this.title = this.props.title;
+  }
+
+  render() {
+    const windowWidth = window.innerWidth;
+    const photoBlockWidth = windowWidth * 0.4;
+    const photoBlockHeight = photoBlockWidth;
+
+    return(
+      <button className="photo-block" style={{width: photoBlockWidth, height: photoBlockHeight}}>
+        {this.title}
+      </button>
     );
   }
 }

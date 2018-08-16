@@ -7,17 +7,24 @@ import "./styles.css";
 export default class FloatMenu extends Component {
   render() {
     const windowHeight = window.innerHeight;
-    console.log("float")
+    const selectedDate = this.props.selectedDate;
 
     return(
       <div className="float-menu">
         <div className="float-panel" style={{height: windowHeight}}></div>
         <div className="cateBlock">
-          <Link to="/journal">
+          <Link 
+            className="route-link"
+            to={{pathname:"/journal", state:{date: selectedDate}}}
+          >
             <button className="cateButton">媽媽手冊</button>
           </Link>
-          <button className="cateButton">代辦事項</button>
-          <button className="cateButton">日記</button>
+          <Link to="/reminder" className="route-link">
+            <button className="cateButton">代辦事項</button>
+          </Link>
+          <Link to="/diary" className="route-link">
+            <button className="cateButton">日記</button>
+          </Link>
         </div>
       </div>
     );
