@@ -18,8 +18,27 @@ library.add(
 export default class CalendarView extends Component {
 	constructor(props) {
 		super(props);
+
+		this.getModifier = this.getModifier.bind(this);
     this.onDayClick = this.onDayClick.bind(this);
-    this.addButtonOnClick = this.addButtonOnClick.bind(this);
+		this.addButtonOnClick = this.addButtonOnClick.bind(this);
+	}
+
+	getModifier(data, selectedDate) {
+		let modifier = {
+			journal:[],
+			reminder:[],
+			diary:[],
+		};
+
+		Object.keys(data).map((key) => {
+			data[key].map((item) => {
+				let date = item.date;
+					modifier[key].push(date);
+			})
+		})
+
+		return modifier;
 	}
 
 
@@ -49,6 +68,7 @@ export default class CalendarView extends Component {
 			border-radius: 20px;
 			color: white;
 		}`;
+
 		const reminderStyle = `.DayPicker-Day--reminder {
 			background-color: #4b81be;
 			height: 20px;
@@ -56,6 +76,7 @@ export default class CalendarView extends Component {
 			border-radius: 20px;
 			color: white;
 		}`;
+
 		const diaryStyle = `.DayPicker-Day--diary {
 			background-color: #5ac084;
 			height: 20px;
@@ -64,18 +85,9 @@ export default class CalendarView extends Component {
 			color: white;
 		}`;
 
-		const modifiers = {
-			journal: [
-				new Date(2018, 7, 15),
-				//new Date(2018, 7, 16)
-			],
-			reminder: [
-				new Date(2018, 7, 17),
-			],
-			diary: [
-				new Date(2018, 7, 20)
-			],
-		};
+		const data = this.props.data;
+		const selectedDate = this.props.selectedDate;
+		const modifiers = this.getModifier(data, selectedDate);
 
 		const testOnClick = ()=> {
 			console.log("use");

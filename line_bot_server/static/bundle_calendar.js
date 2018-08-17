@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "77c0cd74b7625692677e"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d65c672d9a5be032f7a2"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -33294,7 +33294,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n  margin: 0px;\n  overflow: hidden;\n}\n\nbody {\n  margin: 0px;\n  overflow: hidden;\n}\n\n.calendar-page {\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n  align-items: center;\n  margin-top: 20px;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  display: flex;\n  justify-content: center;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 80%;\n}\n\n.add-button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: rgba(255,255,255,255);\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  background-color: #fce2d6;\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n  outline: 0px;\n}\n\n.item:hover {\n  opacity: 0.5;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 14px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 14px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cateBlock {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cateButton {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 60px;\n  margin-top : 20px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}\n\n.route-link {\n  text-decoration: none;\n}", ""]);
+	exports.push([module.id, "html {\n  margin: 0px;\n  overflow: hidden;\n}\n\nbody {\n  margin: 0px;\n  overflow: hidden;\n}\n\n.calendar-page {\n  display: flex;\n  flex-direction: column;\n  align-self: center;\n  align-items: center;\n  margin-top: 20px;\n}\n\n.calendar-view {\n  /* background-color: #aaaaaa; */\n  display: flex;\n  justify-content: center;\n}\n\n.calendar-items-view {\n  /* background-color: grey; */\n  width: 80%;\n}\n\n.add-button {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 15px;\n  right: 20px;\n  background-color: rgba(255,255,255,255);\n  width: 35px;\n  height: 35px;\n  border: 0px;\n  border-radius: 5px;\n}\n\n.item {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  background-color: #fce2d6;\n  height: 45px;\n  width: 100%;\n  margin-top: 2px;\n  border: 0px;\n  outline: 0px;\n}\n\n.item:hover {\n  opacity: 0.5;\n}\n\n.cate-font {\n  display: flex;\n  margin: 10px;\n  font-size: 14px;\n  width: 50px;\n  color: #666666;\n}\n\n.title-font {\n  overflow: hidden;\n  margin: 10px;\n  font-size: 14px;\n  color: #333333;\n}\n\n\n/* float-menu */\n@keyframes fadeIn {\n  0% {\n    opacity: 0;\n  }\n\n  100% {\n    opacity: 0.85;\n  }\n}\n\n.float-panel {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  right: 0px;\n  top: 0px;\n  background-color: #ddaaaa;\n  opacity: 0.85;\n  width: 100%;\n  animation-name: fadeIn;\n  animation-duration: 0.5s;\n}\n\n.cate-block {\n  position: absolute;\n  top: 30%;;\n  left: 25%;\n  width: 50%;\n}\n\n.cate-container {\n  margin-top : 20px;\n}\n\n.cate-button {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  align-items: center;\n  background-color: #c55656;\n  width: 100%;\n  height: 50px;\n  border: 0px;\n  font-size: 14px;\n  color: #ffffff;\n}\n\n.route-link {\n  text-decoration: none;\n}", ""]);
 
 	// exports
 
@@ -34124,7 +34124,7 @@
 	        _react2.default.createElement("div", { className: "float-panel", style: { height: windowHeight } }),
 	        _react2.default.createElement(
 	          "div",
-	          { className: "cateBlock" },
+	          { className: "cate-block" },
 	          _react2.default.createElement(
 	            _reactRouterDom.Link,
 	            {
@@ -34132,27 +34132,39 @@
 	              to: { pathname: "/journal", state: { date: selectedDate } }
 	            },
 	            _react2.default.createElement(
-	              "button",
-	              { className: "cateButton" },
-	              "\u5ABD\u5ABD\u624B\u518A"
+	              "div",
+	              { className: "cate-container" },
+	              _react2.default.createElement(
+	                "button",
+	                { className: "cate-button" },
+	                "\u5ABD\u5ABD\u624B\u518A"
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            _reactRouterDom.Link,
 	            { to: "/reminder", className: "route-link" },
 	            _react2.default.createElement(
-	              "button",
-	              { className: "cateButton" },
-	              "\u4EE3\u8FA6\u4E8B\u9805"
+	              "div",
+	              { className: "cate-container" },
+	              _react2.default.createElement(
+	                "button",
+	                { className: "cate-button" },
+	                "\u4EE3\u8FA6\u4E8B\u9805"
+	              )
 	            )
 	          ),
 	          _react2.default.createElement(
 	            _reactRouterDom.Link,
 	            { to: "/diary", className: "route-link" },
 	            _react2.default.createElement(
-	              "button",
-	              { className: "cateButton" },
-	              "\u65E5\u8A18"
+	              "div",
+	              { className: "cate-container" },
+	              _react2.default.createElement(
+	                "button",
+	                { className: "cate-button" },
+	                "\u65E5\u8A18"
+	              )
 	            )
 	          )
 	        )

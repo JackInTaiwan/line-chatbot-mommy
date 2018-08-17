@@ -37,7 +37,13 @@ export default class CalendarPage extends Component {
 						cate: "diary",
 						date: new Date(),
 						title: "Suck day with ex-boyfriend",
-					}
+					},
+					{
+						id:4,
+						cate: "diary",
+						date: new Date(2018, 7, 4),
+						title: "Marco said he loves me.",
+					},
 				],
 			},
 			selectedDate: new Date(),
@@ -51,7 +57,7 @@ export default class CalendarPage extends Component {
 		console.log(window.innerHeight)
 		return (
 			<div className="calendar-page">
-				<CalendarView parentPage={this} />
+				<CalendarView parentPage={this} data={this.state.data} selectedDate={this.state.selectedDate} />
 				<CalendarItemsView data={this.state.data} selectedDate={this.state.selectedDate} />
 				{this.state.floatMenuToggle ? <FloatMenu selectedDate={this.state.selectedDate}/> : null }
 			</div>
