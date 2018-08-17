@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4c57f0aa5da44c1bf2e5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "49fc3fbe150e339d54f5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34159,7 +34159,7 @@
 	        _react2.default.createElement(
 	          "div",
 	          { className: "date" },
-	          year + " /  " + (month + 1) + " / " + date + " (" + day + ")"
+	          year + " /  " + month + " / " + date + " (" + day + ")"
 	        ),
 	        _react2.default.createElement(
 	          "div",
@@ -34337,7 +34337,7 @@
 	        opacity: 1.0
 	      };
 	      var deleteButtonStyles = "\n    .fileContainer .deleteImage {\n      background-color: #a85d60;\n      width: 25px;\n      height: 25px;\n      font-size: 10px;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    ";
-	      var styles = "\n    .fileContainer{\n      background-color: transparent;\n    }\n    .fileContainer .uploadPictureContainer {\n      box-shadow: none;\n      background-color: transparent;\n      border: 0px;\n    }\n    ";
+	      var styles = "\n    .fileContainer{\n      background-color: transparent;\n    }\n    .fileContainer .uploadPictureContainer {\n      box-shadow: none;\n      background-color: transparent;\n      border: 0px;\n      width: 100%;\n    }\n    .fileContainer {\n      box-shadow: none;\n    }\n    ";
 
 	      return _react2.default.createElement(
 	        "div",

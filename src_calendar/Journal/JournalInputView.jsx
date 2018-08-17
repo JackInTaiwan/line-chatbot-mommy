@@ -10,6 +10,14 @@ export default class JournalInputView extends Component {
 
     this.state = {
       selectedUnderline: "",
+      data: {
+        id: 100,
+        cate: "journal",
+        year: this.props.date.getFullYear(),
+        month: this.props.date.getMonth(),
+        date: this.props.date.getDate(),
+        title: "第10週產檢",
+      }
     }
 
     this.saveButtonOnClick = this.saveButtonOnClick.bind(this);
@@ -29,7 +37,7 @@ export default class JournalInputView extends Component {
         <div className="save-button">
           <div className="save-underline"></div>
           <div className="save-font-container">
-            <Link to="/">
+            <Link to={{pathname:"/", state:{data: this.state.data}}}>
               <button className="save-font" onClick={this.saveButtonOnClick}>儲存</button>
             </Link>
           </div>

@@ -13,15 +13,30 @@ import data from "./data.json"
 export default class CalendarPage extends Component {
 	constructor(props) {
 		super(props);
-
 		this.state = {
 			data: data,
 			selectedDate: new Date(),
 			floatMenuToggle: false,
 		}
-	}
-	
 
+		this.mergeAdditionalJournal = this.mergeAdditionalJournal.bind(this);
+	}
+
+	mergeAdditionalJournal(additionalData) {
+		this.setState((prev) => {
+			let newState = prev;
+			newState.data.journal.push(additionalData);
+			return newState;
+		})
+	}
+
+	componentDidMount() {
+		const additionalData = this.props.location.state ? this.props.location.state.data : null;
+		if (additionalData) {
+			this.mergeAdditionalJournal(additionalData);
+		}
+  }
+	
 	render() {
 		return (
 			<div className="calendar-page">

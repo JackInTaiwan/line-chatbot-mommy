@@ -21,7 +21,7 @@ export default class JournalPage extends Component {
       <div className="journal-page" style={{height: windowHeight}}>
         <JournalHeadView date={this.date}/>
         <JournalPhotoView />
-        <JournalInputView />
+        <JournalInputView date={this.date}/>
       </div>
     );
   }
