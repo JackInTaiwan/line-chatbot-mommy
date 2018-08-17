@@ -59,18 +59,100 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  margin-top: 50px;
 }
 
 .input {
   display: flex;
   flex-direction: row;
-  align-items: baseline;
-  width: 70%;
+  align-items: flex-end;
+  margin-left: 10%;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  background-color: #f34f4f;
+  margin-left: 15px;
+  width: 100px;
+}
+
+/* float-menu */
+@keyframes underlineFadeIn {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1.0;
+    transform: translateX(0%);
+  }
+}
+
+.input-underline {
+  position: absolute;
+  bottom: 2px;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #cccccc;
+  animation-name: underlineFadeIn;
+  animation-duration: 0.8s;
 }
 
 .input-block {
   background-color: transparent;
   border: 0px;
-  width: 60%;
+  width: 100%;
+  font-size: 14px;
   outline: none;
+  margin: 1px;
+}
+
+.input-title-font {
+  font-size: 14px;
+}
+
+.input-tail {
+  height: 14px;
+  margin: 2px;
+}
+
+.save-button {
+  position: absolute;
+  bottom: 50px;
+  align-self: center;
+  width: 100px;
+  height: 30px;
+  background-color: transparent;
+  border: 0px;
+  outline: 0px;
+}
+
+.save-underline {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100px;
+  height: 10px;
+  background-color: #f34f4f;
+}
+
+.save-font-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.save-font {
+  font-size: 16px;
 }
