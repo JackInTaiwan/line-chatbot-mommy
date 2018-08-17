@@ -17,13 +17,19 @@ export default class FloatMenu extends Component {
             className="route-link"
             to={{pathname:"/journal", state:{date: selectedDate}}}
           >
-            <button className="cateButton">媽媽手冊</button>
+            <div className="cate-container">
+              <button className="cateButton">媽媽手冊</button>
+            </div>
           </Link>
           <Link to="/reminder" className="route-link">
-            <button className="cateButton">代辦事項</button>
+            <div className="cate-container">
+              <button className="cateButton">代辦事項</button>
+            </div>
           </Link>
           <Link to="/diary" className="route-link">
-            <button className="cateButton">日記</button>
+            <div className="cate-container">
+              <button className="cateButton">日記</button>
+            </div>
           </Link>
         </div>
       </div>
