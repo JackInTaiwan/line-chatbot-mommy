@@ -63,11 +63,16 @@ export class PhotoBlock extends Component {
       align-items: center;
     }
     `
+    const styles = `
+    .fileContainer{
+      background-color: transparent;
+    }`
     
     return(
       <div className="photo-block" style={{width: photoBlockWidth, height: photoBlockHeight}}>
         <style>{deleteButtonStyles}</style>
-        <div className="photo-upload-font">{this.title}</div>
+        <style>{styles}</style>
+        <div className="photo-upload-font" style={this.state.loaded ? {color:"transparent"} : {color:"#a79883"}}>{this.title}</div>
         <div style={this.state.loaded ? afterUploadStyle : beforeUploadStyle}>
           <ImageUploader
             onChange={this.afterUpload}
