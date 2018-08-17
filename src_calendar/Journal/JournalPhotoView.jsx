@@ -14,7 +14,6 @@ export default class JournalPhotoView extends Component {
       <div className="journal-photo-view">
         <PhotoBlock title={"超音波照片"} />
         <PhotoBlock title={"側面肚肚照"} />
-
       </div>
     );
   }
@@ -47,14 +46,16 @@ export class PhotoBlock extends Component {
     const photoBlockWidth = windowWidth * 0.4;
     const photoBlockHeight = photoBlockWidth;
     const beforeUploadStyle = {
+      width: "100%",
       opacity: 0,
     }
     const afterUploadStyle = {
+      width: "100%",
       opacity: 1.0,
     }
     const deleteButtonStyles = `
     .fileContainer .deleteImage {
-      background-color: #c2b4a1;
+      background-color: #a85d60;
       width: 25px;
       height: 25px;
       font-size: 10px;
@@ -66,7 +67,13 @@ export class PhotoBlock extends Component {
     const styles = `
     .fileContainer{
       background-color: transparent;
-    }`
+    }
+    .fileContainer .uploadPictureContainer {
+      box-shadow: none;
+      background-color: transparent;
+      border: 0px;
+    }
+    `
     
     return(
       <div className="photo-block" style={{width: photoBlockWidth, height: photoBlockHeight}}>
@@ -80,7 +87,6 @@ export class PhotoBlock extends Component {
             buttonStyles={{width:100, height:100, borderWidth:0, outline: 0, backgroundColor: "transparent"}}
             withIcon={false}
             withLabel={false}
-            buttonText='Choose images'
             imgExtension={['.jpg', '.gif', '.png', '.gif']}
             maxFileSize={5242880}
             singleImage={true}

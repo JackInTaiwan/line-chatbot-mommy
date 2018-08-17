@@ -58,8 +58,8 @@
 }
 
 .photo-block:hover {
-  background-color: #dfd3c3;
-  opacity: 0.5;
+  border-width: 3px;
+  /* opacity: 0.5; */
 }
 
 .photo-upload-font {
@@ -207,4 +207,8 @@
 
 .chooseFileButton {
   background-color: #a79883;
+}
+
+.fileContainer .uploadPicturesWrapper {
+  background-color: transparent;
 }
