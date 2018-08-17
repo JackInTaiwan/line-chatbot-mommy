@@ -50,9 +50,23 @@
   justify-content: center;
   align-items: center;
   background-color: transparent;
+  padding: 5px;
+  border: solid;
   border-width: 1px;
-  border-color: #ddc7a6;
+  border-color: #c2b4a1;
   color: #a79883;
+}
+
+.photo-block:hover {
+  background-color: #dfd3c3;
+  opacity: 0.5;
+}
+
+.photo-upload-font {
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  font-size: 12px;
 }
 
 .journal-input-view {
@@ -159,4 +173,29 @@
 
 .save-font {
   font-size: 16px;
+}
+
+
+
+/* uploader */
+.fileContainer {
+  background: transparent;
+  /* box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.05); */
+  position: relative;
+  border-radius: 10px;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 10px auto;
+  transition: all 0.3s ease-in;
+}
+
+.uploadPicturesWrapper {
+  position: absolute;
+}
+
+.chooseFileButton {
+  background-color: #a79883;
 }

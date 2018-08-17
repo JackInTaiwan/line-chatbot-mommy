@@ -41,7 +41,15 @@ module.exports = {
 		{
 			test: /\.json$/,
 			loader: "json-loader"
-		}]
+		},
+		{
+			test: /\.svg$/,
+			include: [/react-images-upload/],
+			loader: 'file-loader',
+			options: {
+					name: '[name].[ext]?[hash]'
+			}
+			}]
 	},
 	resolve: {
 		extensions: ["", ".js", ".jsx", ".scss", ".less", ".css", "json"]
