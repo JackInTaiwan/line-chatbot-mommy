@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "49fc3fbe150e339d54f5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c05020bd896e2be3a9ee"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26349,10 +26349,29 @@
 				selectedDate: new Date(),
 				floatMenuToggle: false
 			};
+
+			_this.mergeAdditionalJournal = _this.mergeAdditionalJournal.bind(_this);
 			return _this;
 		}
 
 		_createClass(CalendarPage, [{
+			key: "mergeAdditionalJournal",
+			value: function mergeAdditionalJournal(additionalData) {
+				this.setState(function (prev) {
+					var newState = prev;
+					newState.data.journal.push(additionalData);
+					return newState;
+				});
+			}
+		}, {
+			key: "componentDidMount",
+			value: function componentDidMount() {
+				var additionalData = this.props.location.state ? this.props.location.state.data : null;
+				if (additionalData) {
+					this.mergeAdditionalJournal(additionalData);
+				}
+			}
+		}, {
 			key: "render",
 			value: function render() {
 				return _react2.default.createElement(
@@ -34081,7 +34100,7 @@
 	        { className: "journal-page", style: { height: windowHeight } },
 	        _react2.default.createElement(_JournalHeaderView2.default, { date: this.date }),
 	        _react2.default.createElement(_JournalPhotoView2.default, null),
-	        _react2.default.createElement(_JournalInputView2.default, null)
+	        _react2.default.createElement(_JournalInputView2.default, { date: this.date })
 	      );
 	    }
 	  }]);
@@ -37893,7 +37912,15 @@
 	    var _this = _possibleConstructorReturn(this, (JournalInputView.__proto__ || Object.getPrototypeOf(JournalInputView)).call(this, props));
 
 	    _this.state = {
-	      selectedUnderline: ""
+	      selectedUnderline: "",
+	      data: {
+	        id: 100,
+	        cate: "journal",
+	        year: _this.props.date.getFullYear(),
+	        month: _this.props.date.getMonth(),
+	        date: _this.props.date.getDate(),
+	        title: "第10週產檢"
+	      }
 	    };
 
 	    _this.saveButtonOnClick = _this.saveButtonOnClick.bind(_this);
@@ -37924,7 +37951,7 @@
 	            { className: "save-font-container" },
 	            _react2.default.createElement(
 	              _reactRouterDom.Link,
-	              { to: "/" },
+	              { to: { pathname: "/", state: { data: this.state.data } } },
 	              _react2.default.createElement(
 	                "button",
 	                { className: "save-font", onClick: this.saveButtonOnClick },
