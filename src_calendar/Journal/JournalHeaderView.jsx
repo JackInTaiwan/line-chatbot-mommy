@@ -30,7 +30,7 @@ export default class JournalHeaderView extends Component {
     return(
       <div className="journal-header-view">
         <div className="header">{this.title}</div> 
-        <div className="date">{`${year} /  ${(month + 1)} / ${date} (${day})`}</div>     
+        <div className="date">{`${year} /  ${(month)} / ${date} (${day})`}</div>     
         <div className="week">{`第 ${week} 週`}</div>
       </div>
     );
