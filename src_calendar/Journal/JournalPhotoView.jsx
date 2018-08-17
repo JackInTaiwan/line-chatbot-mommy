@@ -72,6 +72,10 @@ export class PhotoBlock extends Component {
       box-shadow: none;
       background-color: transparent;
       border: 0px;
+      width: 100%;
+    }
+    .fileContainer {
+      box-shadow: none;
     }
     `
     
