@@ -1,4 +1,5 @@
 import React, { Component } from "react"; 
+import { Link } from "react-router-dom";
 import "./styles.css";
 
 
@@ -10,6 +11,12 @@ export default class JournalInputView extends Component {
     this.state = {
       selectedUnderline: "",
     }
+
+    this.saveButtonOnClick = this.saveButtonOnClick.bind(this);
+  }
+
+  saveButtonOnClick() {
+    console.log("use save");
   }
 
   render() {
@@ -21,7 +28,9 @@ export default class JournalInputView extends Component {
         <div className="save-button">
           <div className="save-underline"></div>
           <div className="save-font-container">
-            <div className="save-font">儲存</div>
+            <Link to="/">
+              <button className="save-font" onClick={this.saveButtonOnClick}>儲存</button>
+            </Link>
           </div>
         </div>
       </div>
