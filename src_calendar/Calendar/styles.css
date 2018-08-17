@@ -99,7 +99,7 @@ body {
   animation-duration: 0.5s;
 }
 
-.cateBlock {
+.cate-block {
   position: absolute;
   top: 30%;;
   left: 25%;
@@ -110,7 +110,7 @@ body {
   margin-top : 20px;
 }
 
-.cateButton {
+.cate-button {
   display: flex;
   flex-direction: column;
   justify-content: center;
