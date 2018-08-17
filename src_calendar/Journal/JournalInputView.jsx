@@ -52,14 +52,16 @@ export class Input extends Component {
     const tail = this.props.tail;
     const inputWidth = this.props.inputWidth;
     const underlineToggle = this.props.underlineToggle;
-    const fontColor = underlineToggle ? "#dddddd" : "#aaaaaa"
+    const fontOnColor = "#858383";
+    const fontOffColor = "#cccccc";
+    const fontColor = underlineToggle ? fontOnColor : fontOffColor;
 
     return(
       <button className="input" onClick={this.onClick}>
         <div className="input-title-font">{title}</div>
         <div className="input-container" style={{width: inputWidth}}>
           <input className="input-block" type="text" name={name} style={{color: fontColor}}></input>
-          {underlineToggle ? <div className="input-tail" style={{color: "#dddddd"}}>{tail}</div> : null}
+          {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
           {underlineToggle ? <div className="input-underline"></div> : null}
         </div>
       </button>

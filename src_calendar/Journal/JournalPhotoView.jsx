@@ -12,7 +12,7 @@ export default class JournalPhotoView extends Component {
     return(
       <div className="journal-photo-view">
         <PhotoBlock title={"超音波照片"} />
-        <PhotoBlock title={"媽咪肚肚照"} />
+        <PhotoBlock title={"側面肚肚照"} />
       </div>
     );
   }
