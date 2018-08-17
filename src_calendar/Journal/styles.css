@@ -81,6 +81,8 @@
   flex-direction: row;
   align-items: flex-end;
   margin-left: 10%;
+  border: 0px;
+  background: transparent;
 }
 
 .input-container {
@@ -138,7 +140,7 @@
 
 .save-button {
   position: absolute;
-  bottom: 50px;
+  bottom: 5%;
   align-self: center;
   width: 100px;
   height: 30px;
@@ -172,15 +174,22 @@
 }
 
 .save-font {
+  background-color: transparent;
   font-size: 16px;
+  border-width: 0px;
 }
 
 
 
 /* uploader */
+.fileUploader {
+  background-color: transparent;
+}
+
 .fileContainer {
   background: transparent;
   /* box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.05); */
+  background-color: transparent;
   position: relative;
   border-radius: 10px;
   padding: 20px 0;
