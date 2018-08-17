@@ -10,6 +10,7 @@ library.add(
 )
 
 
+
 export default class CalendarItemsView extends Component {
 	constructor(props) {
 		super(props);
@@ -19,26 +20,14 @@ export default class CalendarItemsView extends Component {
 
 	extractItems(data, selectedDate) {
 		let extractedItems = [];
-		
-		data.journal.map((item) => {
-			let date = item.date;
-			if (date.getYear() == selectedDate.getYear() && date.getMonth() == selectedDate.getMonth() && date.getDate() == selectedDate.getDate()){
-				extractedItems.push(item);
-			}
-		})
 
-		data.reminder.map((item) => {
-			let date = item.date;
-			if (date.getYear() == selectedDate.getYear() && date.getMonth() == selectedDate.getMonth() && date.getDate() == selectedDate.getDate()){
-				extractedItems.push(item);
-			}
-		})
-
-		data.diary.map((item) => {
-			let date = item.date;
-			if (date.getYear() == selectedDate.getYear() && date.getMonth() == selectedDate.getMonth() && date.getDate() == selectedDate.getDate()){
-				extractedItems.push(item);
-			}
+		Object.keys(data).map((key) => {
+			data[key].map((item) => {
+				let date = new Date(item.year, item.month, item.date);
+				if (date.getYear() == selectedDate.getYear() && date.getMonth() == selectedDate.getMonth() && date.getDate() == selectedDate.getDate()){
+					extractedItems.push(item);
+				}
+			})
 		})
 
 		return extractedItems;
@@ -49,7 +38,7 @@ export default class CalendarItemsView extends Component {
 		const data = this.props.data;
 		const selectedDate = this.props.selectedDate;
 		const extractedItems = this.extractItems(data, selectedDate)
-		console.log(extractedItems);
+
 		return(
 			<div className="calendar-items-view">
         {

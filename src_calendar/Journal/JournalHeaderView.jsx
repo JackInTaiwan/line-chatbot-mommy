@@ -8,7 +8,7 @@ export default class JournalHeaderView extends Component {
     super(props);
     this.title = "媽媽手冊";
     this.date = this.props.date;
-    this.week = 3;
+    this.week = 10;
 
     this.convertDayToEn = this.convertDayToEn.bind(this);
   }

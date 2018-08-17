@@ -16,6 +16,7 @@ export default class JournalInputView extends Component {
   }
 
   saveButtonOnClick() {
+    // to be finished
     console.log("use save");
   }
 

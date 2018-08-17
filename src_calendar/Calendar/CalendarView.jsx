@@ -33,11 +33,10 @@ export default class CalendarView extends Component {
 
 		Object.keys(data).map((key) => {
 			data[key].map((item) => {
-				let date = item.date;
+				let date = new Date(item.year, item.month, item.date);
 					modifier[key].push(date);
 			})
 		})
-
 		return modifier;
 	}
 
