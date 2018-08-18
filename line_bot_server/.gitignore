@@ -1,1 +1,7 @@
+.idea/
 __pycache__/
+
+templates/
+static/
+
+db.sqlite3

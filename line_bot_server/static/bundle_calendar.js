@@ -65,11 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-<<<<<<< HEAD
-/******/ 	var hotCurrentHash = "e25b2f6d3a9478b5eae0"; // eslint-disable-line no-unused-vars
-=======
-/******/ 	var hotCurrentHash = "4bb70be62c4b6e214bc4"; // eslint-disable-line no-unused-vars
->>>>>>> 7cf438f3eb03950cdf39589c0390abae0367fd89
+/******/ 	var hotCurrentHash = "46e2f9af5e87dff8f83f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34360,12 +34356,8 @@
 	        height: "100%",
 	        opacity: 1.0
 	      };
-<<<<<<< HEAD
 	      var deleteButtonStyles = "\n    .fileContainer .deleteImage {\n      display: flex;\n      justify-content: center;\n      align-items: center;\n      top: 0px;\n      right: 0px;\n      background-color: transparent;\n      width: 20px;\n      height: 20px;\n      font-size: 7px;\n      border: solid;\n      border-width: 1px;\n      border-color: #a85d60;\n      color: #a85d60;\n    }\n    ";
-=======
-	      var deleteButtonStyles = "\n    .fileContainer .deleteImage {\n      background-color: #a85d60;\n      width: 25px;\n      height: 25px;\n      font-size: 10px;\n      display: flex;\n      justify-content: center;\n      align-items: center;\n    }\n    ";
->>>>>>> 7cf438f3eb03950cdf39589c0390abae0367fd89
-	      var styles = "\n    .fileContainer{\n      display: flex;\n      flex-direction: column;\n      position: relative;\n      align-items: center;\n      justify-content: center;\n      width: 100%;\n      height: 100%;\n      background-color: transparent;\n      box-shadow: none;\n      border-radius: 0px;\n      padding: 0px;\n      margin: 0px;\n      transition: all 0.3s ease-in;\n    }\n\n    .uploadPicturesWrapper{\n      position: absolute;\n      background-color: transparent;\n    }\n\n    .fileContainer .uploadPictureContainer {\n      box-shadow: none;\n      background-color: transparent;\n      border: 0px;\n      width: 100%;\n      max-width: 100%;\n      max-height: 100%;\n    }\n\n    ";
+	      var styles = "\n    .fileContainer{\n      display: flex;\n      flex-direction: column;\n      position: relative;\n      align-items: center;\n      justify-content: center;\n      width: 100%;\n      height: 100%;\n      background-color: transparent;\n      box-shadow: none;\n      border-radius: 0px;\n      padding: 0px;\n      margin: 0px;\n      transition: all 0.3s ease-in;\n    }\n\n    .uploadPicturesWrapper{\n      position: absolute;\n      background-color: transparent;\n    }\n\n    .fileContainer .uploadPictureContainer {\n      box-shadow: none;\n      background-color: transparent;\n      border: 0px;\n      width: 100%;\n      max-width: 95%;\n      max-height: 95%;\n    }\n    ";
 
 	      return _react2.default.createElement(
 	        "div",
