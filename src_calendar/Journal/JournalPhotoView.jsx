@@ -47,36 +47,62 @@ export class PhotoBlock extends Component {
     const photoBlockHeight = photoBlockWidth;
     const beforeUploadStyle = {
       width: "100%",
+      height: "100%",
       opacity: 0,
     }
     const afterUploadStyle = {
       width: "100%",
+      height: "100%",
       opacity: 1.0,
     }
     const deleteButtonStyles = `
     .fileContainer .deleteImage {
-      background-color: #a85d60;
-      width: 25px;
-      height: 25px;
-      font-size: 10px;
       display: flex;
       justify-content: center;
       align-items: center;
+      top: 0px;
+      right: 0px;
+      background-color: transparent;
+      width: 20px;
+      height: 20px;
+      font-size: 7px;
+      border: solid;
+      border-width: 1px;
+      border-color: #a85d60;
+      color: #a85d60;
     }
     `
     const styles = `
     .fileContainer{
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+      box-shadow: none;
+      border-radius: 0px;
+      padding: 0px;
+      margin: 0px;
+      transition: all 0.3s ease-in;
+    }
+
+    .uploadPicturesWrapper{
+      position: absolute;
       background-color: transparent;
     }
+
     .fileContainer .uploadPictureContainer {
       box-shadow: none;
       background-color: transparent;
       border: 0px;
       width: 100%;
+      max-width: 95%;
+      max-height: 95%;
     }
-    .fileContainer {
-      box-shadow: none;
-    }
+
     `
     
     return(
@@ -88,7 +114,7 @@ export class PhotoBlock extends Component {
           <ImageUploader
             onChange={this.afterUpload}
             withPreview={true}
-            buttonStyles={{width:100, height:100, borderWidth:0, outline: 0, backgroundColor: "transparent"}}
+            buttonStyles={{width:"100%", height:"100%", margin:0, borderWidth:0, outline: 0, backgroundColor: "transparent"}}
             withIcon={false}
             withLabel={false}
             imgExtension={['.jpg', '.gif', '.png', '.gif']}
