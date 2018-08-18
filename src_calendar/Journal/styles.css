@@ -131,11 +131,6 @@
   margin: 1px;
 }
 
-.input-block:focus{
-  position:fixed;
-  top:50px;
-}
-
 .input-title-font {
   font-size: 14px;
 }

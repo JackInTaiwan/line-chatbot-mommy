@@ -99,8 +99,8 @@ export class PhotoBlock extends Component {
       background-color: transparent;
       border: 0px;
       width: 95%;
-      max-width: 95%;
-      max-height: 95%;
+      max-width: 90%;
+      max-height: 90%;
     }
     `
     
