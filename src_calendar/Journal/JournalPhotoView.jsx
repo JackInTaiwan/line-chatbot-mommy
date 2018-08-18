@@ -62,7 +62,7 @@ export class PhotoBlock extends Component {
       align-items: center;
       top: 0px;
       right: 0px;
-      background-color: transparent;
+      background-color: #fff;
       width: 20px;
       height: 20px;
       font-size: 7px;
@@ -98,7 +98,7 @@ export class PhotoBlock extends Component {
       box-shadow: none;
       background-color: transparent;
       border: 0px;
-      width: 100%;
+      width: 95%;
       max-width: 95%;
       max-height: 95%;
     }
