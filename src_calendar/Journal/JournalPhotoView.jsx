@@ -102,7 +102,6 @@ export class PhotoBlock extends Component {
       max-width: 95%;
       max-height: 95%;
     }
-
     `
     
     return(
