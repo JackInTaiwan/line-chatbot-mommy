@@ -63,7 +63,6 @@ export default class CalendarView extends Component {
 		const data = this.props.data;
 		const selectedDate = this.props.selectedDate;
 		const modifiers = this.getModifier(data, selectedDate);
-
 		const testOnClick = ()=> {
 			console.log("use");
 		}
