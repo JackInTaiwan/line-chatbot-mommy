@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, re_path
 from .views import render_html, render_js
+from .views import calendar_item
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", render_html),
-    re_path(r'$', render_js),
+    path("calendar_item", calendar_item)
 ]

@@ -14,7 +14,7 @@ module.exports = {
 	},
 	output: {
 		path: path.resolve(__dirname, "dist"),
-		filename: "[name].js"
+		filename: "static/[name].js"
 	},
 	module: {
 		loaders: [{

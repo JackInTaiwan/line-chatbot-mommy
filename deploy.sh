@@ -5,7 +5,7 @@ yarn build
 echo "2) mv web files..."
 rm -rf ./line_bot_server/static/*
 rm -rf ./line_bot_server/templates/*
-cp ./dist/*.js ./line_bot_server/static/
+cp ./dist/static/*.js ./line_bot_server/static/
 cp ./dist/*.html ./line_bot_server/templates/
 
 cp -r ./line_bot_server/* ../../PycharmProjects/line_bot_server/
