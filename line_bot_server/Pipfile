@@ -10,6 +10,7 @@ dj-static = "*"
 django = "*"
 whitenoise = "*"
 pymongo = "*"
+django-cors-headers = "*"
 
 [dev-packages]
 

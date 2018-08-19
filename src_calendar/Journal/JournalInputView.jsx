@@ -17,23 +17,48 @@ export default class JournalInputView extends Component {
         month: this.props.date.getMonth(),
         date: this.props.date.getDate(),
         title: "第10週產檢",
+        content: {
+          momWeight: "",
+          babyWeight: "",
+          babyHeight: "",
+        }
       }
     }
 
+    this.inputOnChange = this.inputOnChange.bind(this);
     this.saveButtonOnClick = this.saveButtonOnClick.bind(this);
+  }
+
+  inputOnChange(event, cate) {
+    let value = event.target.value;
+    console.log(this.state.data.content);
+    this.setState((prev) => {
+      let newState = prev;
+      newState.data.content[cate] = value;
+      return newState;
+    })
   }
 
   saveButtonOnClick() {
     // to be finished
-    console.log("use save");
+    console.log(this.state.data);
+    fetch('http://localhost:8000/calendar_item', {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(this.state.data)
+    })
   }
+
 
   render() {
     return(
       <div className="journal-input-view">
-        <Input title={"媽咪體重"} tail={"kg"} name="mom-weight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "mom-weight"}/>
-        <Input title={"Baby體重"} tail={"g"} name="baby-weight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "baby-weight"} />
-        <Input title={"Baby身長"} tail={"cm"} name="baby-height" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "baby-height"} />
+        <Input onChange={this.inputOnChange} value={this.state.data.content.momWeight} title={"媽咪體重"} tail={"kg"} name="momWeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "mom-weight"}/>
+        <Input onChange={this.inputOnChange} value={this.state.data.content.babyWeight} title={"Baby體重"} tail={"g"} name="babyWeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "baby-weight"} />
+        <Input onChange={this.inputOnChange} value={this.state.data.content.babyHeight} title={"Baby身長"} tail={"cm"} name="babyHeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "baby-height"} />
         <div className="save-button">
           <div className="save-underline"></div>
           <div className="save-font-container">
@@ -56,6 +81,7 @@ export class Input extends Component {
     this.onClick = this.onClick.bind(this);
   }
 
+
   onClick() {
     this.props.parent.setState((prev) => {
       let newState = prev;
@@ -63,6 +89,7 @@ export class Input extends Component {
       return newState;
     })
   }
+
 
   render() {
     const name = this.props.name;
@@ -78,7 +105,7 @@ export class Input extends Component {
       <button className="input" onClick={this.onClick}>
         <div className="input-title-font">{title}</div>
         <div className="input-container" style={{width: inputWidth}}>
-          <input className="input-block" type="text" name={name} style={{color: fontColor}}></input>
+          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}}></input>
           {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
           {underlineToggle ? <div className="input-underline"></div> : null}
         </div>
