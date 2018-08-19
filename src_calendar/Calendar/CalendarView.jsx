@@ -60,30 +60,6 @@ export default class CalendarView extends Component {
 
 
 	render() {
-		const journalStyle = `.DayPicker-Day--journal {
-			background-color: #f38ac4;
-			height: 20px;
-			width: 20px;
-			border-radius: 20px;
-			color: white;
-		}`;
-
-		const reminderStyle = `.DayPicker-Day--reminder {
-			background-color: #4b81be;
-			height: 20px;
-			width: 20px;
-			border-radius: 20px;
-			color: white;
-		}`;
-
-		const diaryStyle = `.DayPicker-Day--diary {
-			background-color: #5ac084;
-			height: 20px;
-			width: 20px;
-			border-radius: 20px;
-			color: white;
-		}`;
-
 		const data = this.props.data;
 		const selectedDate = this.props.selectedDate;
 		const modifiers = this.getModifier(data, selectedDate);
@@ -94,9 +70,6 @@ export default class CalendarView extends Component {
 
 		return (
 			<div className="calendar-view">
-				<style>{journalStyle}</style>
-				<style>{reminderStyle}</style>
-				<style>{diaryStyle}</style>
 				<DayPicker
 					showOutsideDays={true}
 					modifiers={modifiers}
