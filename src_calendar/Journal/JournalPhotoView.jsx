@@ -99,8 +99,11 @@ export class PhotoBlock extends Component {
       background-color: transparent;
       border: 0px;
       width: 95%;
-      max-width: 90%;
-      max-height: 90%;
+    }
+
+    img.uploadPicture {
+      max-height: ${photoBlockHeight}px;
+      max-width: ${photoBlockWidth}px;
     }
     `
     
