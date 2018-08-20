@@ -83,7 +83,7 @@ export default class JournalInputView extends Component {
       body: JSON.stringify({
         user_id: this.userId,
         year: this.state.data.year,
-        month: this.state.data.month,
+        month: (this.state.data.month + 1),
         date: this.state.data.date,
       })
     })
