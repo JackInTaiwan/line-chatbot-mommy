@@ -7,11 +7,13 @@ import "./styles.css";
 export default class JournalInputView extends Component {
   constructor(props){
     super(props);
+    this.userId = this.props.userId;
+    console.log("JournalInputView get userId", this.userId);
 
     this.state = {
       selectedUnderline: "",
       data: {
-        id: 100,
+        userId: "",
         cate: "journal",
         year: this.props.date.getFullYear(),
         month: this.props.date.getMonth(),
@@ -29,6 +31,15 @@ export default class JournalInputView extends Component {
     this.saveButtonOnClick = this.saveButtonOnClick.bind(this);
   }
 
+  componentWillMount() {
+    this.setState((prev) => {
+      let newState = prev;
+      newState.data.userId = this.userId;
+      console.log("componentWillMount set new userId", newState);
+      return newState;
+    })
+  }
+
   inputOnChange(event, cate) {
     let value = event.target.value;
     console.log(this.state.data.content);
@@ -40,27 +51,24 @@ export default class JournalInputView extends Component {
   }
 
   saveButtonOnClick() {
-    fetch('http://172.104.34.165:8000/article/article', {
+    fetch('http://localhost:8000/calendar_item', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({
-        title: "知識小學堂文章標題",
-        content: "文章內容",
-        raw: "文章內容raw",
-        tag: "文章標籤"
-      })
+      body: JSON.stringify(this.state.data)
     })
     .then((res) => {
-      console.log(res.status);
-      return res.json()
+      console.log("API calendar_item [POST]:", res.status);
     })
-    .then((body) => {
-      console.log(body);
+    .then(()=> {
+      setTimeout(function(){
+        console.log('A');
+    },5000);
     })
   }
+
 
 
   render() {

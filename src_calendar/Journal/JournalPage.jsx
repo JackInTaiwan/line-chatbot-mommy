@@ -12,6 +12,8 @@ export default class JournalPage extends Component {
 	constructor(props) {
     super(props);
     this.date = this.props.location.state.date;
+    this.userId = this.props.location.state.userId;
+    console.log("JournalPage get userId:", this.userId);
   }
 
   render() {
@@ -21,7 +23,7 @@ export default class JournalPage extends Component {
       <div className="journal-page" style={{height: windowHeight}}>
         <JournalHeadView date={this.date}/>
         <JournalPhotoView />
-        <JournalInputView date={this.date}/>
+        <JournalInputView userId={this.userId} date={this.date}/>
       </div>
     );
   }

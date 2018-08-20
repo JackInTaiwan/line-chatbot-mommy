@@ -8,6 +8,7 @@ export default class FloatMenu extends Component {
   render() {
     const windowHeight = window.innerHeight;
     const selectedDate = this.props.selectedDate;
+    const userId = this.props.userId;
 
     return(
       <div className="float-menu">
@@ -15,7 +16,7 @@ export default class FloatMenu extends Component {
         <div className="cate-block">
           <Link 
             className="route-link"
-            to={{pathname:"/journal", state:{date: selectedDate}}}
+            to={{pathname:"/journal", state:{date: selectedDate, userId: userId}}}
           >
             <div className="cate-container">
               <button className="cate-button">媽媽手冊</button>

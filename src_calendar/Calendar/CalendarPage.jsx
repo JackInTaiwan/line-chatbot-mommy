@@ -20,23 +20,11 @@ export default class CalendarPage extends Component {
 			floatMenuToggle: false,
 		}
 
-		this.mergeAdditionalJournal = this.mergeAdditionalJournal.bind(this);
 		this.getData = this.getData.bind(this);
 	}
 
-	mergeAdditionalJournal(additionalData) {
-		this.setState((prev) => {
-			let newState = prev;
-			newState.data.journal.push(additionalData);
-			return newState;
-		})
-	}
 
 	componentWillMount() {
-		const additionalData = this.props.location.state ? this.props.location.state.data : null;
-		if (additionalData) {
-			this.mergeAdditionalJournal(additionalData);
-		}
 		liff.init(
 			data => {
 			  this.setState({"userId":data.context.userId}, () => {
@@ -61,12 +49,17 @@ export default class CalendarPage extends Component {
 			},
 		})
 		.then((res) => {
-			let body = res.json();
-			return body;
+			return res.json();
 		})
 		.then((body) => {
-			console.log(body);
+			console.log("CalendarPage get body:", body)
+			let newData = {journal:[], reminder:[], diary:[]}
+			body.map((item) => {
+				newData[item.cate].push(item);
+			})
+			this.setState({data: newData});
 		})
+		.then(console.log("newState", this.state))
 	}
 	
 	render() {
@@ -74,7 +67,7 @@ export default class CalendarPage extends Component {
 			<div className="calendar-page">
 				<CalendarView parentPage={this} data={this.state.data} selectedDate={this.state.selectedDate} />
 				<CalendarItemsView data={this.state.data} selectedDate={this.state.selectedDate} />
-				{this.state.floatMenuToggle ? <FloatMenu selectedDate={this.state.selectedDate}/> : null }
+				{this.state.floatMenuToggle ? <FloatMenu userId={this.state.userId} selectedDate={this.state.selectedDate}/> : null }
 			</div>
     );
 	}
