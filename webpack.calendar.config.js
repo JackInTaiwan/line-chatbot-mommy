@@ -11,11 +11,13 @@ var srcDirName = "src_calendar";
 module.exports = {
 	context: path.join(__dirname, srcDirName),
 	entry: {
-		bundle_calendar: "./index.js",
-		vendor_calendar: ["react"]
+		// bundle_calendar: "./index.js",
+		// vendor_calendar: ["react"]
+		bundle_setting: "./index.js",
+		vendor_setting: ["react"]
 	},
 	output: {
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "dist_calendar"),
 		filename: "static/[name].js"
 	},
 	module: {
@@ -68,4 +70,5 @@ module.exports = {
 		}),
 		new OpenBrowserPlugin({ url: "http://localhost:8080" })
 	]
+
 };
