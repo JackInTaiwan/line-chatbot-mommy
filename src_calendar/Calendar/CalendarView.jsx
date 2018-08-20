@@ -79,7 +79,7 @@ export default class CalendarView extends Component {
 					<FontAwesomeIcon 
 						icon="plus-circle" 
 						size="2x"
-            color="#dd8888"
+						color="#dd8888"
 					/>
 				</button>
 			</div>

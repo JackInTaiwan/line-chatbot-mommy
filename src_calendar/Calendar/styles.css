@@ -169,7 +169,7 @@ button {
 
 /*** react-day-picker ***/
 .DayPicker-Day--diary {
-  background-color: #5ac084;
+  background-color: #7bc79b;
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -177,7 +177,7 @@ button {
 }
 
 .DayPicker-Day--reminder {
-  background-color: #4b81be;
+  background-color: #72a0d4;
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -185,7 +185,7 @@ button {
 }
 
 .DayPicker-Day--journal {
-  background-color: #f38ac4;
+  background-color: #f7add5;
   height: 10px;
   width: 10px;
   border-radius: 50%;

@@ -7,8 +7,6 @@ import LoadingCover from "./LoadingCover";
 import "react-day-picker/lib/style.css";
 import "./styles.css";
 
-import data from "./data.json"
-
 
 
 export default class CalendarPage extends Component {

@@ -4,8 +4,8 @@ var autoprefixer = require("autoprefixer");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
-// var srcDirName = "src_calendar";
-var srcDirName = "src_setting";
+var srcDirName = "src_calendar";
+// var srcDirName = "src_setting";
 
 
 module.exports = {
