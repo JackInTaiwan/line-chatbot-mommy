@@ -80,10 +80,10 @@ export default class JournalInputView extends Component {
   render() {
     return(
       <div className="journal-input-view">
-        <Input onChange={this.inputOnChange} value={this.state.data.content.title} title={"媽咪體重"} tail={"kg"} name="momWeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "momWeight"}/>
-        <Input onChange={this.inputOnChange} value={this.state.data.content.momWeight} title={"媽咪體重"} tail={"kg"} name="momWeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "momWeight"}/>
-        <Input onChange={this.inputOnChange} value={this.state.data.content.babyWeight} title={"Baby體重"} tail={"g"} name="babyWeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "babyWeight"} />
-        <Input onChange={this.inputOnChange} value={this.state.data.content.babyHeight} title={"Baby身長"} tail={"cm"} name="babyHeight" inputWidth={50} parent={this} underlineToggle={this.state.selectedUnderline == "babyHeight"} />
+        <Input onChange={this.inputOnChange} value={this.state.data.title} title={"標題"} tail={""} name="title" style={{flex:1}} parent={this} underlineToggle={this.state.selectedUnderline == "title"}/>
+        <Input onChange={this.inputOnChange} value={this.state.data.content.momWeight} title={"媽咪體重"} tail={"kg"} name="momWeight" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "momWeight"}/>
+        <Input onChange={this.inputOnChange} value={this.state.data.content.babyWeight} title={"Baby體重"} tail={"g"} name="babyWeight" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "babyWeight"} />
+        <Input onChange={this.inputOnChange} value={this.state.data.content.babyHeight} title={"Baby身長"} tail={"cm"} name="babyHeight" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "babyHeight"} />
         <div className="save-button">
           <div className="save-underline"></div>
           <div className="save-font-container">
@@ -120,7 +120,7 @@ export class Input extends Component {
     const name = this.props.name;
     const title = this.props.title;
     const tail = this.props.tail;
-    const inputWidth = this.props.inputWidth;
+    const style = this.props.style;
     const underlineToggle = this.props.underlineToggle;
     const fontOnColor = "#858383";
     const fontOffColor = "#cccccc";
@@ -129,7 +129,7 @@ export class Input extends Component {
     return(
       <button className="input" onClick={this.onClick}>
         <input className="input-title-font" disabled={true} value={title}></input>
-        <div className="input-container" style={{width: inputWidth}}>
+        <div className="input-container" style={style}>
           <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}}></input>
           {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
           {underlineToggle ? <div className="input-underline"></div> : null}

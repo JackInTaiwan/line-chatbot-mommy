@@ -81,8 +81,9 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  padding: 0px;
+  width: 70%;
   height: 20px;
+  padding: 0px;
   margin-left: 10%;
   border: 0px;
   outline: 0px;
