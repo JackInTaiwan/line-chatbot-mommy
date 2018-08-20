@@ -152,6 +152,18 @@ button {
   text-decoration: none;
 }
 
+.loading-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;;
+  left: 25%;
+  width: 50%;
+  color: #fff;
+  font-size: 24px;
+}
+
 
 
 /*** react-day-picker ***/
