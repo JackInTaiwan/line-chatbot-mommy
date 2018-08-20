@@ -62,14 +62,15 @@ export class PhotoBlock extends Component {
       align-items: center;
       top: 0px;
       right: 0px;
-      background-color: #fff;
-      width: 20px;
-      height: 20px;
-      font-size: 7px;
+      background-color: #333333;
+      opacity: 0.2;
+      width: 16px;
+      height: 16px;
+      font-size: 5px;
       border: solid;
-      border-width: 1px;
+      border-width: 0px;
       border-color: #a85d60;
-      color: #a85d60;
+      color: #fff;
     }
     `
     const styles = `
