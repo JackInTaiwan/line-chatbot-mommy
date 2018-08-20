@@ -13,7 +13,7 @@ import data from "./data.json"
 export default class CalendarPage extends Component {
 	constructor(props) {
 		super(props);
-		this.url = "http://line-bot-mommy.herokuapp.com"
+		this.url = "https://line-bot-mommy.herokuapp.com"
 		// this.url = "http://localhost:8000"
 		this.state = {
 			userId: "",

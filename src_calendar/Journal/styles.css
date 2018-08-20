@@ -81,6 +81,8 @@
   display: flex;
   flex-direction: row;
   align-items: flex-end;
+  padding: 0px;
+  height: 20px;
   margin-left: 10%;
   border: 0px;
   outline: 0px;
@@ -90,12 +92,11 @@
 .input-container {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   overflow: hidden;
   position: relative;
   /* background-color: #f34f4f; */
   margin-left: 15px;
-  margin-bottom: -1px;
   width: 100px;
 }
 
@@ -114,7 +115,6 @@
 
 .input-underline {
   position: absolute;
-  bottom: 1px;
   left: 0px;
   height: 1px;
   width: 100%;
@@ -127,12 +127,21 @@
   background-color: transparent;
   border: 0px;
   width: 100%;
+  padding: 0px;
   font-size: 14px;
+  vertical-align: 0px;
   outline: none;
-  margin: 1px;
+  margin-left: 1px;
 }
 
-.input-title-font {
+.input-title-font:disabled {
+  background-color: transparent;
+  width: 60px;
+  opacity: 1;
+  color: #333333;
+  outline: 0px;
+  padding: 0px;
+  border-width: 0px;
   font-size: 14px;
 }
 
