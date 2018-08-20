@@ -73,10 +73,22 @@ export default class JournalInputView extends Component {
     .then((res) => {
       console.log("API calendar_item [POST]:", res.status);
     })
-    .then(()=> {
-      setTimeout(function(){
-        console.log('A');
-    },5000);
+
+    fetch(`https://line-mommy-baby.herokuapp.com/reminder`, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        user_id: this.userId,
+        year: this.state.data.year,
+        month: this.state.data.month,
+        date: this.state.data.date,
+      })
+    })
+    .then((res) => {
+      console.log("API reminder [POST]:", res.status);
     })
   }
 
