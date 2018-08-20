@@ -44,7 +44,12 @@ export default class JournalInputView extends Component {
 
   inputOnChange(event, cate) {
     if (cate == "title") {
-      // to be finished
+      let value = event.target.value;
+      this.setState((prev) => {
+        let newState = prev;
+        prev.data.title = value;
+        return newState;
+      })
     } else {
       let value = event.target.value;
       console.log(this.state.data.content);
@@ -119,6 +124,7 @@ export class Input extends Component {
   render() {
     const name = this.props.name;
     const title = this.props.title;
+    const value = this.props.value;
     const tail = this.props.tail;
     const style = this.props.style;
     const underlineToggle = this.props.underlineToggle;
@@ -130,7 +136,7 @@ export class Input extends Component {
       <button className="input" onClick={this.onClick}>
         <input className="input-title-font" disabled={true} value={title}></input>
         <div className="input-container" style={style}>
-          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}}></input>
+          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}} value={value}></input>
           {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
           {underlineToggle ? <div className="input-underline"></div> : null}
         </div>
