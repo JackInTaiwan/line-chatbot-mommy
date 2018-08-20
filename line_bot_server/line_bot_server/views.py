@@ -32,8 +32,24 @@ def render_js(req) :
 @csrf_exempt
 def calendar_item(req):
     if req.method == "GET":
-        print("use get")
-        return HttpResponse(status=200)
+        user_id = req.GET["userId"]
+        conn = MongoClient(mongodb_url)
+        db = conn["line-bot-mommy"]
+        collection = db["calendar_items"]
+        data = collection.find({"userId": user_id})
+
+        data = list(data)
+        print(str(data[0]["_id"]))
+        for i, datum in enumerate(data):
+            attr_map = ["cate", "year", "month", "date", "title"]
+            new_datum = dict()
+            new_datum["id"] = str(datum["_id"])
+            for attr in attr_map:
+                new_datum[attr] = datum[attr]
+            data[i] = new_datum
+        res = json.dumps(data)
+
+        return HttpResponse(res, status=200)
 
 
     elif req.method == "POST":
@@ -44,6 +60,7 @@ def calendar_item(req):
         collection.insert_one(body)
         print("use")
         return HttpResponse(status=200)
+
 
     else:
         return HttpResponse(status=404)

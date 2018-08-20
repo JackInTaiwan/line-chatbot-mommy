@@ -40,15 +40,25 @@ export default class JournalInputView extends Component {
   }
 
   saveButtonOnClick() {
-    // to be finished
-    console.log(this.state.data);
-    fetch('http://localhost:8000/calendar_item', {
+    fetch('http://172.104.34.165:8000/article/article', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(this.state.data)
+      body: JSON.stringify({
+        title: "知識小學堂文章標題",
+        content: "文章內容",
+        raw: "文章內容raw",
+        tag: "文章標籤"
+      })
+    })
+    .then((res) => {
+      console.log(res.status);
+      return res.json()
+    })
+    .then((body) => {
+      console.log(body);
     })
   }
 

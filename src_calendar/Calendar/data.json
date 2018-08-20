@@ -1,7 +1,7 @@
 {
   "journal": [
     {
-      "id":0,
+      "id":"0",
       "cate": "journal",
       "year": 2018,
       "month": 7,
@@ -11,7 +11,7 @@
   ],
   "reminder": [
     {
-      "id":2,
+      "id":"2",
       "cate": "reminder",
       "year": 2018,
       "month": 7,
