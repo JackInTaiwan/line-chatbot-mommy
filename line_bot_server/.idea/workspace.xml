@@ -14,8 +14,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/line_bot_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="111">
-              <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="360">
+              <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -68,8 +68,8 @@
         <option value="$PROJECT_DIR$/line_bot_server/urls.py" />
         <option value="$PROJECT_DIR$/Pipfile" />
         <option value="$PROJECT_DIR$/line_bot_server/settings.py" />
-        <option value="$PROJECT_DIR$/line_bot_server/views.py" />
         <option value="$PROJECT_DIR$/Pipfile.lock" />
+        <option value="$PROJECT_DIR$/line_bot_server/views.py" />
       </list>
     </option>
   </component>
@@ -163,7 +163,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="101" y="54" width="1567" height="1049" extended-state="0" />
+    <frame x="81" y="22" width="1567" height="1049" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24983777" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -318,8 +319,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/line_bot_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="111">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="360">
+          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -13,9 +13,11 @@ import data from "./data.json"
 export default class CalendarPage extends Component {
 	constructor(props) {
 		super(props);
+		this.url = "http://line-bot-mommy.herokuapp.com"
+		// this.url = "http://localhost:8000"
 		this.state = {
 			userId: "",
-			data: data,
+			data: {journal:[], reminder:[], diary:[]},
 			selectedDate: new Date(),
 			floatMenuToggle: false,
 		}
@@ -41,7 +43,7 @@ export default class CalendarPage extends Component {
 	}
 
 	getData(userId) {
-		fetch(`http://localhost:8000/calendar_item?userId=${userId}`, {
+		fetch(`${this.url}/calendar_item?userId=${userId}`, {
 			method: 'GET',
 			headers: {
 			  'Accept': 'application/json',

@@ -39,7 +39,6 @@ def calendar_item(req):
         data = collection.find({"userId": user_id})
 
         data = list(data)
-        print(str(data[0]["_id"]))
         for i, datum in enumerate(data):
             attr_map = ["cate", "year", "month", "date", "title"]
             new_datum = dict()

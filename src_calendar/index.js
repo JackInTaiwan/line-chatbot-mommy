@@ -9,7 +9,7 @@ import JournalPage from "./Journal/JournalPage";
 render((
     <BrowserRouter>
         <Switch>
-            <Route path="/" exact={true} component={CalendarPage} />
+            <Route path="/" exact={true} component={CalendarPage} sta />
             <Route path="/journal" component={JournalPage} />
             {/* <Route path="/reminder" component={ReminderPage} />
             <Route path="/diary" component={ReminderPage} /> */}

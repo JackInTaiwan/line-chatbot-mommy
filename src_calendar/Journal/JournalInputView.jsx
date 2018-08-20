@@ -7,6 +7,8 @@ import "./styles.css";
 export default class JournalInputView extends Component {
   constructor(props){
     super(props);
+    this.url = "http://line-bot-mommy.herokuapp.com"
+    //this.url = "http://localhost:8000"
     this.userId = this.props.userId;
     console.log("JournalInputView get userId", this.userId);
 
@@ -51,7 +53,7 @@ export default class JournalInputView extends Component {
   }
 
   saveButtonOnClick() {
-    fetch('http://localhost:8000/calendar_item', {
+    fetch(`${this.url}/calendar_item`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
