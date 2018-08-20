@@ -2,8 +2,11 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import SettingPage from "./Setting/SettingPage";
 import AddingPage from "./Adding/AddingPage";
 import SyncPage from "./Sync/SyncPage";
+
+import "./styles.css"
 
 
 

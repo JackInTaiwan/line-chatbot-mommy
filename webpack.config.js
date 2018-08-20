@@ -4,10 +4,12 @@ var autoprefixer = require("autoprefixer");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
+// var srcDirName = "src_calendar";
+var srcDirName = "src_setting";
 
 
 module.exports = {
-	context: path.join(__dirname, "src_calendar"),
+	context: path.join(__dirname, srcDirName),
 	entry: {
 		bundle_calendar: "./index.js",
 		vendor_calendar: ["react"]
@@ -62,7 +64,7 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, "src_calendar/index.html")
+			template: path.join(__dirname, `${srcDirName}/index.html`)
 		}),
 		new OpenBrowserPlugin({ url: "http://localhost:8080" })
 	]
