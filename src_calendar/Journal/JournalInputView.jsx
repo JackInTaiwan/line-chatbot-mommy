@@ -103,11 +103,11 @@ export default class JournalInputView extends Component {
         <Input onChange={this.inputOnChange} value={this.state.data.content.babyHeight} title={"Baby身長"} tail={"cm"} name="babyHeight" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "babyHeight"} />
         <div className="save-button">
           <div className="save-underline"></div>
-          <div className="save-font-container">
-            <Link to={{pathname:"/", state:{data: this.state.data}}}>
-              <button className="save-font" onClick={this.saveButtonOnClick}>儲存</button>
-            </Link>
-          </div>
+          <Link to={{pathname:"/", state:{data: this.state.data}}}>
+            <button className="save-font-container" onClick={this.saveButtonOnClick}>
+              <div className="save-font">儲存</div>
+            </button>
+          </Link>
         </div>
       </div>
     );
@@ -141,7 +141,7 @@ export class Input extends Component {
     const style = this.props.style;
     const underlineToggle = this.props.underlineToggle;
     const fontOnColor = "#858383";
-    const fontOffColor = "#cccccc";
+    const fontOffColor = "#aaaaaa";
     const fontColor = underlineToggle ? fontOnColor : fontOffColor;
 
     return(

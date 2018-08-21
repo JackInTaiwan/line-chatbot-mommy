@@ -1,16 +1,122 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChild } from "@fortawesome/free-solid-svg-icons";
+
+import "./styles.css";
+
+library.add(
+  faChild,
+)
 
 
 
 export default class AddingPage extends Component {
 	constructor(props) {
     super(props);
+
+    this.state = {
+      selectedUnderline: "",
+      babyName: "Marco",
+      expectedBirthDate: "2019/07/01",
+      gender: "女",
+    }
+
+    this.inputOnChange = this.inputOnChange.bind(this);
+    this.sendMessege = this.sendMessege.bind(this);
+  }
+
+
+  inputOnChange(event, cate) {
+    let value = event.target.value;
+    this.setState((prev) => {
+      let newState = prev;
+      prev[cate] = value;
+      return newState;
+    })
+  }
+
+
+  sendMessege() {
+    let message = `
+    寶寶名字：${this.state.babyName}
+    預產期：${this.state.expectedBirthDate}
+    性別：${this.state.gender}
+    `
+    liff.sendMessages([
+      {
+        type: 'text',
+        text: message
+      }
+    ])
+    .then(() => {
+      console.log('message sent');
+    })
+    .catch((err) => {
+      console.log('error', err);
+    });
   }
 
 
   render() {
     return(
-      <div></div>
+      <div className="adding-page">
+        <Input onChange={this.inputOnChange} value={this.state.babyName} title={"寶寶名字"} tail={""} name="babyName" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "babyName"}/>
+        <Input onChange={this.inputOnChange} value={this.state.expectedBirthDate} title={"預產期"} tail={""} name="expectedBirthDate" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "expectedBirthDate"}/>
+        <Input onChange={this.inputOnChange} value={this.state.gender} title={"性別"} tail={""} name="gender" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "gender"}/>
+        <div className="adding-underline"></div>
+        <Link className="save-btn" to={{pathname: "/"}} onClick={this.sendMessege}>
+          <FontAwesomeIcon 
+            icon="child"
+            color={"#ee5d8d"}
+            size="2x"
+          />
+        </Link>
+      </div>
+    );
+  }
+}
+
+
+
+export class Input extends Component {
+  constructor(props){
+    super(props);
+
+    this.onClick = this.onClick.bind(this);
+  }
+
+
+  onClick() {
+    this.props.parent.setState((prev) => {
+      let newState = prev;
+      newState.selectedUnderline = this.props.name;
+      return newState;
+    })
+  }
+
+
+  render() {
+    const name = this.props.name;
+    const title = this.props.title;
+    const value = this.props.value;
+    const tail = this.props.tail;
+    const style = this.props.style;
+    const underlineToggle = this.props.underlineToggle;
+    const fontOnColor = "#858383";
+    const fontOffColor = "#ffffff";
+    const fontColor = underlineToggle ? fontOnColor : fontOffColor;
+
+    return(
+      <button className="input" onClick={this.onClick}>
+        <input className="input-title-font" disabled={true} value={title}></input>
+        <div className="input-container" style={style}>
+          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}} value={value}></input>
+          {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
+          {underlineToggle ? <div className="input-underline"></div> : null}
+        </div>
+      </button>
     );
   }
 }

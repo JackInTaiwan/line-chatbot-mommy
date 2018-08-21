@@ -1,0 +1,114 @@
+.adding-page {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width:100%;
+  background-color: #f7dd96;
+}
+
+
+
+/*** iunput ***/
+
+.input {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 70%;
+  height: 25px;
+  padding: 0px;
+  margin-left: 10%;
+  border: 0px;
+  outline: 0px;
+  background: transparent;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  overflow: hidden;
+  position: relative;
+  /* background-color: #f34f4f; */
+  margin-left: 15px;
+  width: 100px;
+}
+
+/* float-menu */
+@keyframes underlineFadeIn {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1.0;
+    transform: translateX(0%);
+  }
+}
+
+.input-underline {
+  position: absolute;
+  left: 0px;
+  height: 1px;
+  width: 100%;
+  background-color: #858383;
+  animation-name: underlineFadeIn;
+  animation-duration: 0.8s;
+}
+
+.input-block {
+  background-color: transparent;
+  border: 0px;
+  width: 100%;
+  padding: 0px;
+  font-size: 14px;
+  vertical-align: 0px;
+  outline: none;
+  margin-left: 1px;
+}
+
+.input-title-font:disabled {
+  background-color: transparent;
+  width: 60px;
+  opacity: 1;
+  color: #be5035;
+  outline: 0px;
+  padding: 0px;
+  border-width: 0px;
+  font-size: 14px;
+}
+
+.input-tail {
+  height: 14px;
+  margin: 2px;
+}
+
+.adding-underline {
+  height: 1px;
+  width: 70%;
+  margin-top: 10px;
+  background-color: #c09489;
+}
+
+.save-btn {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border-width: 0px;
+  outline: 0px;
+  background-color: transparent;
+}
+
+.save-btn:hover {
+  background-color: #df9797;
+  opacity: 0.5;
+}

@@ -12,26 +12,35 @@ export default class SettingPage extends Component {
   }
 
 
+  componentWillMount() {
+    liff.init(
+			data => {
+			  console.log("liff init success...");
+			},
+			error => {
+				console.log("liff init fail...");
+			}
+		);
+	}
+  
+
+
   render() {
     return(
       <div className="setting-page">
         <div className="setting-block">
-          <div className="save-button">
-            <div className="save-underline"></div>
-            <div className="save-font-container">
-              <Link to={{pathname:"/add"}}>
-                <button className="save-font">{"新增"}</button>
-              </Link>
-            </div>
+        <Link to={{pathname:"/add"}} className="save-button">
+          <div className="save-underline"></div>
+          <div className="save-font-container">
+              <button className="save-font">{"新增"}</button>
           </div>
-          <div className="save-button">
-            <div className="save-underline"></div>
-            <div className="save-font-container">
-              <Link to={{pathname: "/sync"}}>
-                <button className="save-font">{"同步"}</button>
-              </Link>
-            </div>
+        </Link>
+        <Link to={{pathname:"/add"}} className="save-button">
+          <div className="save-underline"></div>
+          <div className="save-font-container">
+              <button className="save-font">{"同步"}</button>
           </div>
+        </Link>
         </div>
       </div>
     );
