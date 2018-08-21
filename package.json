@@ -14,8 +14,7 @@
     "start-calendar": "webpack-dev-server --display-error-details --inline --progress --colors --config webpack.calendar.config.js --port 8080",
     "start-setting": "webpack-dev-server --display-error-details --inline --progress --colors --config webpack.setting.config.js --port 8080",
     "clean": "rimraf ./dist ./build",
-    "build-calendar": "rimraf ./dist && webpack --config  webpack.calendar.config.js",
-    "build-setting": "rimraf ./dist && webpack --config  webpack.setting.config.js",
+    "build-calendar": "rimraf ./dist_calendar && webpack --config webpack.calendar.config.js",
     "deploy": "rimraf ./build && NODE_ENV=production webpack -p --config webpack.prd.config.js"
   },
   "repository": {
