@@ -7,7 +7,7 @@ import JournalPage from "./Journal/JournalPage";
 
 
 render((
-    <BrowserRouter>
+    <BrowserRouter basename="/">
         <Switch>
             <Route path="/" exact={true} component={CalendarPage} />
             <Route path="/journal" component={JournalPage} />

@@ -11,7 +11,8 @@
   "main": "./build",
   "scripts": {
     "lint": "./node_modules/.bin/eslint eslint 'src/**/*.@(js|jsx)'",
-    "start": "webpack-dev-server --display-error-details --inline --progress --colors --port 8080",
+    "start-calendar": "webpack-dev-server --display-error-details --inline --progress --colors --config webpack.calendar.config.js --port 8080",
+    "start-setting": "webpack-dev-server --display-error-details --inline --progress --colors --config webpack.setting.config.js --port 8080",
     "clean": "rimraf ./dist ./build",
     "build-calendar": "rimraf ./dist && webpack --config  webpack.calendar.config.js",
     "build-setting": "rimraf ./dist && webpack --config  webpack.setting.config.js",

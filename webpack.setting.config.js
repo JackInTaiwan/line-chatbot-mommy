@@ -65,7 +65,7 @@ module.exports = {
 		new webpack.NoErrorsPlugin(),
 		new HtmlWebpackPlugin({
 			template: path.join(__dirname, `${srcDirName}/index.html`),
-			filename: "index_setting.html"
+			filename: "index.html"
 		}),
 		new OpenBrowserPlugin({ url: "http://localhost:8080" })
 	]

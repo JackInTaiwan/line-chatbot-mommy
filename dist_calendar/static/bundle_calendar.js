@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "aeca18b0264dd3c42cb4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2de8b059afa848090ce1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26379,7 +26379,7 @@
 			value: function getData(userId) {
 				var _this3 = this;
 
-				fetch(this.url + "/calendar_item?userId=" + userId, {
+				fetch(this.url + "/calendar/calendar_item?userId=" + userId, {
 					method: 'GET',
 					headers: {
 						'Accept': 'application/json',
@@ -38036,7 +38036,7 @@
 	  }, {
 	    key: "saveButtonOnClick",
 	    value: function saveButtonOnClick() {
-	      fetch(this.url + "/calendar_item", {
+	      fetch(this.url + "/calendar/calendar_item", {
 	        method: 'POST',
 	        headers: {
 	          'Accept': 'application/json',
