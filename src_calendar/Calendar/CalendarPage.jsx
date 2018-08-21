@@ -43,7 +43,7 @@ export default class CalendarPage extends Component {
 	}
 
 	getData(userId) {
-		fetch(`${this.url}/calendar_item?userId=${userId}`, {
+		fetch(`${this.url}/calendar/calendar_item?userId=${userId}`, {
 			method: 'GET',
 			headers: {
 			  'Accept': 'application/json',

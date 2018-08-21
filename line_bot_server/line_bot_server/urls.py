@@ -21,6 +21,7 @@ from .views import calendar_item
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", render_root),
+    path("calendar/calendar_item", calendar_item),
     path("<str:index>", render_html),
-    path("calendar_item", calendar_item)
+
 ]

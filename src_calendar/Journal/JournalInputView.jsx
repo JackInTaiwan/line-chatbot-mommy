@@ -62,7 +62,7 @@ export default class JournalInputView extends Component {
   }
 
   saveButtonOnClick() {
-    fetch(`${this.url}/calendar_item`, {
+    fetch(`${this.url}/calendar/calendar_item`, {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
