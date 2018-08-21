@@ -16,8 +16,18 @@ mongodb_url = "mongodb://jack_shiba:friends10439@ds125602.mlab.com:25602/line-bo
 
 
 """ Views """
-def render_html(req):
-  return render(req, "index.html")
+def render_root(req):
+    index = req.GET["page"]
+    if index == "setting":
+        return render(req, "index_setting.html")
+
+    elif index == "calendar":
+        return render(req, "index_calendar.html")
+
+
+
+def render_html(req, index):
+    return redirect("/?page={}".format(index))
 
 
 

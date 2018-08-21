@@ -15,7 +15,7 @@ module.exports = {
 		vendor_calendar: ["react"]
 	},
 	output: {
-		path: path.resolve(__dirname, "dist"),
+		path: path.resolve(__dirname, "dist_calendar"),
 		filename: "static/[name].js"
 	},
 	module: {
@@ -64,7 +64,8 @@ module.exports = {
 		new webpack.HotModuleReplacementPlugin(),
 		new webpack.NoErrorsPlugin(),
 		new HtmlWebpackPlugin({
-			template: path.join(__dirname, `${srcDirName}/index.html`)
+			template: path.join(__dirname, `${srcDirName}/index.html`),
+			filename: "index_calendar.html"
 		}),
 		new OpenBrowserPlugin({ url: "http://localhost:8080" })
 	]

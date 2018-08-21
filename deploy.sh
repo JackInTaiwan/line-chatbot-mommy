@@ -1,12 +1,15 @@
 echo "1) yarn build..."
-yarn build
+yarn build-calendar
+yarn build-setting
 
 
 echo "2) mv web files..."
 rm -rf ./line_bot_server/static/*
 rm -rf ./line_bot_server/templates/*
-cp ./dist/static/*.js ./line_bot_server/static/
-cp ./dist/*.html ./line_bot_server/templates/
+cp ./dist_calendar/static/*.js ./line_bot_server/static/
+cp ./dist_setting/static/*.js ./line_bot_server/static/
+cp ./dist_calendar/*.html ./line_bot_server/templates/
+cp ./dist_setting/*.html ./line_bot_server/templates/
 
 cp -r ./line_bot_server/* ../../PycharmProjects/line_bot_server/
 
