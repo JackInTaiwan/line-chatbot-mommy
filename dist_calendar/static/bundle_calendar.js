@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "4ecf4b6b0dbb9f8e024f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "700881c75793d2c768ed"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -609,10 +609,8 @@
 	    _react2.default.createElement(
 	        _reactRouterDom.Switch,
 	        null,
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/", exact: true, authed: true, component: _CalendarPage2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/journal", authed: true, component: _JournalPage2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/reminder", authed: true, component: ReminderPage }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: "/diary", authed: true, component: ReminderPage })
+	        _react2.default.createElement(_reactRouterDom.Route, { path: "/", exact: true, component: _CalendarPage2.default }),
+	        _react2.default.createElement(_reactRouterDom.Route, { path: "/journal", component: _JournalPage2.default })
 	    )
 	), document.getElementById("container"));
 

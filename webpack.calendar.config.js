@@ -5,16 +5,14 @@ var HtmlWebpackPlugin = require("html-webpack-plugin");
 var OpenBrowserPlugin = require("open-browser-webpack-plugin");
 
 var srcDirName = "src_calendar";
-// var srcDirName = "src_setting";
+
 
 
 module.exports = {
 	context: path.join(__dirname, srcDirName),
 	entry: {
-		// bundle_calendar: "./index.js",
-		// vendor_calendar: ["react"]
-		bundle_setting: "./index.js",
-		vendor_setting: ["react"]
+		bundle_calendar: "./index.js",
+		vendor_calendar: ["react"]
 	},
 	output: {
 		path: path.resolve(__dirname, "dist_calendar"),
