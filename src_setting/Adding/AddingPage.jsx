@@ -120,8 +120,8 @@ export class Input extends Component {
     const tail = this.props.tail;
     const style = this.props.style;
     const underlineToggle = this.props.underlineToggle;
-    const fontColor = "#ffffff";
-    const fontOpacity = underlineToggle ? 1 : 0.5;
+    const fontColor = "#be5035";
+    const fontOpacity = underlineToggle ? 1 : 0.3;
 
     return(
       <button className="input" onClick={this.onClick}>

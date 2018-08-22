@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "9a908c6832c6c6a1a064"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "49d5605ec042a6eaa02f"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27086,11 +27086,16 @@
 	      selectedUnderline: "",
 	      babyName: "Marco",
 	      expectedBirthDate: "2019/07/01",
-	      gender: "女"
+	      gender: "女",
+	      saveBtnColor: "#f885d6"
 	    };
+	    _this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"];
+	    _this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"];
+	    _this.boyColor = "#58a6f3";
+	    _this.girlColor = "#f885d6";
 
 	    _this.inputOnChange = _this.inputOnChange.bind(_this);
-	    _this.sendMessege = _this.sendMessege.bind(_this);
+	    _this.sendMessage = _this.sendMessage.bind(_this);
 	    return _this;
 	  }
 
@@ -27103,10 +27108,21 @@
 	        prev[cate] = value;
 	        return newState;
 	      });
+
+	      if (cate == "gender") {
+	        var inputGender = event.target.value;
+	        if (this.genderBoyWordList.indexOf(inputGender) != -1) {
+	          console.log("use gender boy");
+	          this.setState({ saveBtnColor: this.boyColor });
+	        } else if (this.genderGirlWordList.indexOf(inputGender) != -1) {
+	          console.log("use gender girl");
+	          this.setState({ saveBtnColor: this.girlColor });
+	        }
+	      }
 	    }
 	  }, {
-	    key: "sendMessege",
-	    value: function sendMessege() {
+	    key: "sendMessage",
+	    value: function sendMessage() {
 	      var message = "\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A" + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A" + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A" + this.state.gender + "\n    ";
 	      liff.sendMessages([{
 	        type: 'text',
@@ -27129,10 +27145,10 @@
 	        _react2.default.createElement("div", { className: "adding-underline" }),
 	        _react2.default.createElement(
 	          _reactRouterDom.Link,
-	          { className: "save-btn", to: { pathname: "/" }, onClick: this.sendMessege },
+	          { className: "save-btn", to: { pathname: "/" }, onClick: this.sendMessage },
 	          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, {
 	            icon: "child",
-	            color: "#ee5d8d",
+	            color: this.state.saveBtnColor,
 	            size: "2x"
 	          })
 	        )
@@ -27179,9 +27195,8 @@
 	      var tail = this.props.tail;
 	      var style = this.props.style;
 	      var underlineToggle = this.props.underlineToggle;
-	      var fontOnColor = "#858383";
-	      var fontOffColor = "#ffffff";
-	      var fontColor = underlineToggle ? fontOnColor : fontOffColor;
+	      var fontColor = "#ffffff";
+	      var fontOpacity = underlineToggle ? 1 : 0.5;
 
 	      return _react2.default.createElement(
 	        "button",
@@ -27192,13 +27207,13 @@
 	          { className: "input-container", style: style },
 	          _react2.default.createElement("input", { onChange: function onChange(e) {
 	              _this4.props.onChange(e, name);
-	            }, className: "input-block", type: "text", name: name, style: { color: fontColor }, value: value }),
+	            }, className: "input-block", type: "text", name: name, style: { color: fontColor, opacity: fontOpacity }, value: value }),
 	          underlineToggle ? _react2.default.createElement(
 	            "div",
-	            { className: "input-tail", style: { color: fontOnColor } },
+	            { className: "input-tail", style: { color: fontColor } },
 	            tail
 	          ) : null,
-	          underlineToggle ? _react2.default.createElement("div", { className: "input-underline" }) : null
+	          underlineToggle ? _react2.default.createElement("div", { className: "input-underline", style: { backgroundColor: fontColor } }) : null
 	        )
 	      );
 	    }
@@ -31541,7 +31556,7 @@
 
 
 	// module
-	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #be5035;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #c09489;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
+	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #be5035;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #daa99d;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
 
 	// exports
 
@@ -31650,7 +31665,7 @@
 
 
 	// module
-	exports.push([module.id, "html {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    border: 0px;\n    margin: 0px;\n}\n\nbody {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    border: 0px;\n    margin: 0px;\n}\n\n.container {\n    display: flex;\n    width: 100%;\n    height: 100%;\n}", ""]);
+	exports.push([module.id, "html {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    border: 0px;\n    margin: 0px;\n}\n\nbody {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    border: 0px;\n    margin: 0px;\n}\n\ndiv {\n    background-color: transparent;\n}\n\n.container {\n    display: flex;\n    width: 100%;\n    height: 100%;\n}", ""]);
 
 	// exports
 
