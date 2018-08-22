@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "49d5605ec042a6eaa02f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "d07d4b1c479c334c00fd"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27095,7 +27095,9 @@
 	    _this.girlColor = "#f885d6";
 
 	    _this.inputOnChange = _this.inputOnChange.bind(_this);
+	    _this.saveBtnOnClick = _this.saveBtnOnClick.bind(_this);
 	    _this.sendMessage = _this.sendMessage.bind(_this);
+	    _this.closeWindow = _this.closeWindow.bind(_this);
 	    return _this;
 	  }
 
@@ -27121,17 +27123,30 @@
 	      }
 	    }
 	  }, {
+	    key: "saveBtnOnClick",
+	    value: function saveBtnOnClick() {
+	      this.sendMessage();
+	    }
+	  }, {
 	    key: "sendMessage",
 	    value: function sendMessage() {
-	      var message = "\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A" + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A" + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A" + this.state.gender + "\n    ";
+	      var _this2 = this;
+
+	      var message = "\n    [ \u57FA\u672C\u8A2D\u5B9A ]\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A " + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A " + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A " + this.state.gender + "\n    ";
 	      liff.sendMessages([{
 	        type: 'text',
 	        text: message
 	      }]).then(function () {
 	        console.log('message sent');
+	        _this2.closeWindow();
 	      }).catch(function (err) {
 	        console.log('error', err);
 	      });
+	    }
+	  }, {
+	    key: "closeWindow",
+	    value: function closeWindow() {
+	      liff.closeWindow();
 	    }
 	  }, {
 	    key: "render",
@@ -27145,7 +27160,7 @@
 	        _react2.default.createElement("div", { className: "adding-underline" }),
 	        _react2.default.createElement(
 	          _reactRouterDom.Link,
-	          { className: "save-btn", to: { pathname: "/" }, onClick: this.sendMessage },
+	          { className: "save-btn", to: { pathname: "/" }, onClick: this.saveBtnOnClick },
 	          _react2.default.createElement(_reactFontawesome.FontAwesomeIcon, {
 	            icon: "child",
 	            color: this.state.saveBtnColor,
@@ -27167,27 +27182,27 @@
 	  function Input(props) {
 	    _classCallCheck(this, Input);
 
-	    var _this2 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
+	    var _this3 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
 
-	    _this2.onClick = _this2.onClick.bind(_this2);
-	    return _this2;
+	    _this3.onClick = _this3.onClick.bind(_this3);
+	    return _this3;
 	  }
 
 	  _createClass(Input, [{
 	    key: "onClick",
 	    value: function onClick() {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      this.props.parent.setState(function (prev) {
 	        var newState = prev;
-	        newState.selectedUnderline = _this3.props.name;
+	        newState.selectedUnderline = _this4.props.name;
 	        return newState;
 	      });
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      var name = this.props.name;
 	      var title = this.props.title;
@@ -27195,8 +27210,8 @@
 	      var tail = this.props.tail;
 	      var style = this.props.style;
 	      var underlineToggle = this.props.underlineToggle;
-	      var fontColor = "#ffffff";
-	      var fontOpacity = underlineToggle ? 1 : 0.5;
+	      var fontColor = "#be5035";
+	      var fontOpacity = underlineToggle ? 1 : 0.3;
 
 	      return _react2.default.createElement(
 	        "button",
@@ -27206,7 +27221,7 @@
 	          "div",
 	          { className: "input-container", style: style },
 	          _react2.default.createElement("input", { onChange: function onChange(e) {
-	              _this4.props.onChange(e, name);
+	              _this5.props.onChange(e, name);
 	            }, className: "input-block", type: "text", name: name, style: { color: fontColor, opacity: fontOpacity }, value: value }),
 	          underlineToggle ? _react2.default.createElement(
 	            "div",
@@ -31556,7 +31571,7 @@
 
 
 	// module
-	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #be5035;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #daa99d;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
+	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: \"#58a6f3\";\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #daa99d;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
 
 	// exports
 

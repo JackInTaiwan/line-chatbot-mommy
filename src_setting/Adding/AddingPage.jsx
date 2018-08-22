@@ -29,7 +29,9 @@ export default class AddingPage extends Component {
     this.girlColor = "#f885d6";
 
     this.inputOnChange = this.inputOnChange.bind(this);
+    this.saveBtnOnClick = this.saveBtnOnClick.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
+    this.closeWindow = this.closeWindow.bind(this);
   }
 
 
@@ -54,11 +56,17 @@ export default class AddingPage extends Component {
   }
 
 
+  saveBtnOnClick() {
+    this.sendMessage()
+  }
+
+
   sendMessage() {
     let message = `
-    寶寶名字：${this.state.babyName}
-    預產期：${this.state.expectedBirthDate}
-    性別：${this.state.gender}
+    [ 基本設定 ]
+    寶寶名字： ${this.state.babyName}
+    預產期： ${this.state.expectedBirthDate}
+    性別： ${this.state.gender}
     `
     liff.sendMessages([
       {
@@ -68,10 +76,16 @@ export default class AddingPage extends Component {
     ])
     .then(() => {
       console.log('message sent');
+      this.closeWindow();
     })
     .catch((err) => {
       console.log('error', err);
     });
+  }
+
+
+  closeWindow() {
+    liff.closeWindow()
   }
 
 
@@ -82,7 +96,7 @@ export default class AddingPage extends Component {
         <Input onChange={this.inputOnChange} value={this.state.expectedBirthDate} title={"預產期"} tail={""} name="expectedBirthDate" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "expectedBirthDate"}/>
         <Input onChange={this.inputOnChange} value={this.state.gender} title={"性別"} tail={""} name="gender" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "gender"}/>
         <div className="adding-underline"></div>
-        <Link className="save-btn" to={{pathname: "/"}} onClick={this.sendMessage}>
+        <Link className="save-btn" to={{pathname: "/"}} onClick={this.saveBtnOnClick}>
           <FontAwesomeIcon 
             icon="child"
             color={this.state.saveBtnColor}

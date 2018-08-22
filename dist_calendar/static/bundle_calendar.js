@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "700881c75793d2c768ed"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c3fa90d8c6cc40a16e2c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34314,7 +34314,7 @@
 
 
 	// module
-	exports.push([module.id, ".journal-page {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  /* background-color: aquamarine; */\n}\n\n.journal-header-view {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 40px;\n  font-size: 18px;\n  background-color: #dd386a;\n  color: #ffffff;\n}\n\n.date {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: auto;\n  margin-top: 50px;\n}\n\n.week {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: auto;\n}\n\n.journal-photo-view {\n  display: flex;\n  width: 100%;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-top: 10%;\n  /* background-color: blanchedalmond; */\n}\n\n.photo-block {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: transparent;\n  /* padding: 5px; */\n  border: solid;\n  border-width: 1px;\n  border-color: #c2b4a1;\n  color: #a79883;\n}\n\n.photo-block:hover {\n  border-width: 3px;\n  /* opacity: 0.5; */\n}\n\n.photo-upload-font {\n  position: absolute;\n  align-self: center;\n  justify-self: center;\n  font-size: 12px;\n}\n\n.journal-input-view {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 50px;\n  flex: 1;\n}\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 20px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #333333;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.save-button {\n  position: absolute;\n  bottom: 10%;\n  align-self: center;\n  width: 100px;\n  height: 30px;\n  background-color: transparent;\n  border: 0px;\n  outline: 0px;\n}\n\n.save-button:hover {\n  opacity: 0.5;\n}\n\n.save-underline {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100px;\n  height: 15px;\n  background-color: #f34f4f;\n}\n\n.save-font-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n  border-width: 0px;\n  outline: 0px;\n}\n\n.save-font {\n  background-color: transparent;\n  font-size: 16px;\n  border-width: 0px;\n}\n\n\n\n/* uploader */\n.fileUploader {\n  background-color: transparent;\n  width: 100%;\n  height: 100%;\n}\n\n.chooseFileButton {\n  background-color: #a79883;\n}\n\n.fileContainer input {\n  width: 0px;\n}", ""]);
+	exports.push([module.id, ".journal-page {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n  /* background-color: aquamarine; */\n}\n\n.journal-header-view {\n  display: flex;\n  flex-direction: column;\n  width: 100%;\n}\n\n.header {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 100%;\n  height: 40px;\n  font-size: 18px;\n  background-color: #f34a7df3;\n  color: #ffffff;\n}\n\n.date {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: auto;\n  margin-top: 50px;\n}\n\n.week {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: auto;\n}\n\n.journal-photo-view {\n  display: flex;\n  width: 100%;\n  flex-direction: row;\n  justify-content: space-around;\n  margin-top: 10%;\n  /* background-color: blanchedalmond; */\n}\n\n.photo-block {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background-color: transparent;\n  /* padding: 5px; */\n  border: solid;\n  border-width: 1px;\n  border-color: #c2b4a1;\n  color: #a79883;\n}\n\n.photo-block:hover {\n  border-width: 3px;\n  /* opacity: 0.5; */\n}\n\n.photo-upload-font {\n  position: absolute;\n  align-self: center;\n  justify-self: center;\n  font-size: 12px;\n}\n\n.journal-input-view {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: flex-start;\n  margin-top: 50px;\n  flex: 1;\n}\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 20px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #333333;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.save-button {\n  position: absolute;\n  bottom: 10%;\n  align-self: center;\n  width: 100px;\n  height: 30px;\n  background-color: transparent;\n  border: 0px;\n  outline: 0px;\n}\n\n.save-button:hover {\n  opacity: 0.5;\n}\n\n.save-underline {\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100px;\n  height: 15px;\n  background-color: #f34f4f;\n}\n\n.save-font-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  bottom: 0px;\n  left: 0px;\n  width: 100%;\n  height: 100%;\n  background-color: transparent;\n  border-width: 0px;\n  outline: 0px;\n}\n\n.save-font {\n  background-color: transparent;\n  font-size: 16px;\n  border-width: 0px;\n}\n\n\n\n/* uploader */\n.fileUploader {\n  background-color: transparent;\n  width: 100%;\n  height: 100%;\n}\n\n.chooseFileButton {\n  background-color: #a79883;\n}\n\n.fileContainer input {\n  width: 0px;\n}", ""]);
 
 	// exports
 
@@ -37998,6 +37998,7 @@
 
 	    _this.inputOnChange = _this.inputOnChange.bind(_this);
 	    _this.saveButtonOnClick = _this.saveButtonOnClick.bind(_this);
+	    _this.sendMessage = _this.sendMessage.bind(_this);
 	    return _this;
 	  }
 
@@ -38034,6 +38035,20 @@
 	      }
 	    }
 	  }, {
+	    key: "sendMessage",
+	    value: function sendMessage() {
+	      var message = "\n    [ \u5ABD\u54AA\u624B\u518A ]\n    \u6642\u9593\uFF1A " + this.state.data.year + "/" + this.state.data.month + "/" + this.state.data.date + "\n    \u6A19\u984C\uFF1A " + this.state.title + "\n    \u5ABD\u54AA\u9AD4\u91CD\uFF1A " + this.state.data.content.momWeight + "\n    Baby\u9AD4\u91CD\uFF1A " + this.state.data.content.babyWeight + "\n    Baby\u8EAB\u9577\uFF1A " + this.state.data.content.babyHeight + "\n    ";
+
+	      liff.sendMessages([{
+	        type: 'text',
+	        text: message
+	      }]).then(function () {
+	        console.log('message sent');
+	      }).catch(function (err) {
+	        console.log('error', err);
+	      });
+	    }
+	  }, {
 	    key: "saveButtonOnClick",
 	    value: function saveButtonOnClick() {
 	      fetch(this.url + "/calendar/calendar_item", {
@@ -38062,6 +38077,8 @@
 	      }).then(function (res) {
 	        console.log("API reminder [POST]:", res.status);
 	      });
+
+	      this.sendMessage();
 	    }
 	  }, {
 	    key: "render",

@@ -31,7 +31,9 @@ export default class JournalInputView extends Component {
 
     this.inputOnChange = this.inputOnChange.bind(this);
     this.saveButtonOnClick = this.saveButtonOnClick.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
+
 
   componentDidMount() {
     this.setState((prev) => {
@@ -41,6 +43,7 @@ export default class JournalInputView extends Component {
       return newState;
     })
   }
+
 
   inputOnChange(event, cate) {
     if (cate == "title") {
@@ -60,6 +63,32 @@ export default class JournalInputView extends Component {
       })
     }
   }
+
+
+  sendMessage() {
+    let message = `
+    [ 媽咪手冊 ]
+    時間： ${this.state.data.year}/${this.state.data.month}/${this.state.data.date}
+    標題： ${this.state.title}
+    媽咪體重： ${this.state.data.content.momWeight}
+    Baby體重： ${this.state.data.content.babyWeight}
+    Baby身長： ${this.state.data.content.babyHeight}
+    `
+
+    liff.sendMessages([
+      {
+        type: 'text',
+        text: message
+      }
+    ])
+    .then(() => {
+      console.log('message sent');
+    })
+    .catch((err) => {
+      console.log('error', err);
+    });
+  }
+
 
   saveButtonOnClick() {
     fetch(`${this.url}/calendar/calendar_item`, {
@@ -90,6 +119,9 @@ export default class JournalInputView extends Component {
     .then((res) => {
       console.log("API reminder [POST]:", res.status);
     })
+
+    this.sendMessage();
+    
   }
 
 
