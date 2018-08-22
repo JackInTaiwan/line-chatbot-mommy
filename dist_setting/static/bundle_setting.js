@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "15d219fb82f536dc19b4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c2d362beb69eccc47c4c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27087,7 +27087,9 @@
 	      babyName: "Marco",
 	      expectedBirthDate: "2019/07/01",
 	      gender: "女",
-	      saveBtnColor: "#f885d6"
+	      saveBtnColor: "#f885d6",
+	      boyOpacity: 0.3,
+	      girlOpacity: 1
 	    };
 	    _this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"];
 	    _this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"];
@@ -27096,6 +27098,7 @@
 
 	    _this.inputOnChange = _this.inputOnChange.bind(_this);
 	    _this.saveBtnOnClick = _this.saveBtnOnClick.bind(_this);
+	    _this.genderOptionOnClick = _this.genderOptionOnClick.bind(_this);
 	    _this.sendMessage = _this.sendMessage.bind(_this);
 	    _this.closeWindow = _this.closeWindow.bind(_this);
 	    return _this;
@@ -27115,11 +27118,21 @@
 	        var inputGender = event.target.value;
 	        if (this.genderBoyWordList.indexOf(inputGender) != -1) {
 	          console.log("use gender boy");
-	          this.setState({ saveBtnColor: this.boyColor });
+	          this.setState({ saveBtnColor: this.boyOpacity });
 	        } else if (this.genderGirlWordList.indexOf(inputGender) != -1) {
 	          console.log("use gender girl");
-	          this.setState({ saveBtnColor: this.girlColor });
+	          this.setState({ saveBtnColor: this.girlOpacity });
 	        }
+	      }
+	    }
+	  }, {
+	    key: "genderOptionOnClick",
+	    value: function genderOptionOnClick(gender) {
+	      console.log("use");
+	      if (gender == "boy") {
+	        this.setState({ boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor: this.boyColor });
+	      } else if (gender == "girl") {
+	        this.setState({ boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor: this.girlColor });
 	      }
 	    }
 	  }, {
@@ -27151,12 +27164,32 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
+	      var _this3 = this;
+
 	      return _react2.default.createElement(
 	        "div",
 	        { className: "adding-page" },
 	        _react2.default.createElement(Input, { onChange: this.inputOnChange, value: this.state.babyName, title: "寶寶名字", tail: "", name: "babyName", style: { flex: 0.5, maxWidth: 150 }, parent: this, underlineToggle: this.state.selectedUnderline == "babyName" }),
 	        _react2.default.createElement(Input, { onChange: this.inputOnChange, value: this.state.expectedBirthDate, title: "預產期", tail: "", name: "expectedBirthDate", style: { flex: 0.5, maxWidth: 150 }, parent: this, underlineToggle: this.state.selectedUnderline == "expectedBirthDate" }),
-	        _react2.default.createElement(Input, { onChange: this.inputOnChange, value: this.state.gender, title: "性別", tail: "", name: "gender", style: { width: 50 }, parent: this, underlineToggle: this.state.selectedUnderline == "gender" }),
+	        _react2.default.createElement(
+	          "div",
+	          { className: "gender-block" },
+	          _react2.default.createElement("input", { className: "input-title-font", disabled: true, value: "性別" }),
+	          _react2.default.createElement(
+	            "button",
+	            { className: "gender-option", onClick: function onClick() {
+	                _this3.genderOptionOnClick("boy");
+	              }, style: { color: this.boyColor, opacity: this.state.boyOpacity } },
+	            "男"
+	          ),
+	          _react2.default.createElement(
+	            "button",
+	            { className: "gender-option", onClick: function onClick() {
+	                _this3.genderOptionOnClick("girl");
+	              }, style: { color: this.girlColor, opacity: this.state.girlOpacity } },
+	            "女"
+	          )
+	        ),
 	        _react2.default.createElement("div", { className: "adding-underline" }),
 	        _react2.default.createElement(
 	          _reactRouterDom.Link,
@@ -27182,27 +27215,27 @@
 	  function Input(props) {
 	    _classCallCheck(this, Input);
 
-	    var _this3 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
+	    var _this4 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
 
-	    _this3.onClick = _this3.onClick.bind(_this3);
-	    return _this3;
+	    _this4.onClick = _this4.onClick.bind(_this4);
+	    return _this4;
 	  }
 
 	  _createClass(Input, [{
 	    key: "onClick",
 	    value: function onClick() {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      this.props.parent.setState(function (prev) {
 	        var newState = prev;
-	        newState.selectedUnderline = _this4.props.name;
+	        newState.selectedUnderline = _this5.props.name;
 	        return newState;
 	      });
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      var name = this.props.name;
 	      var title = this.props.title;
@@ -27221,7 +27254,7 @@
 	          "div",
 	          { className: "input-container", style: style },
 	          _react2.default.createElement("input", { onChange: function onChange(e) {
-	              _this5.props.onChange(e, name);
+	              _this6.props.onChange(e, name);
 	            }, className: "input-block", type: "text", name: name, style: { color: fontColor, opacity: fontOpacity }, value: value }),
 	          underlineToggle ? _react2.default.createElement(
 	            "div",
@@ -31571,7 +31604,7 @@
 
 
 	// module
-	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: \"#58a6f3\";\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #daa99d;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
+	exports.push([module.id, ".adding-page {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  align-items: center;\n  justify-content: center;\n  height: 100%;\n  width:100%;\n  background-color: #f7dd96;\n}\n\n\n\n/*** iunput ***/\n\n.input {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.input-container {\n  display: flex;\n  flex-direction: row;\n  align-items: flex-end;\n  overflow: hidden;\n  position: relative;\n  /* background-color: #f34f4f; */\n  margin-left: 15px;\n  width: 100px;\n}\n\n/* float-menu */\n@keyframes underlineFadeIn {\n  0% {\n    opacity: 0.5;\n    transform: translateX(-100%);\n  }\n\n  100% {\n    opacity: 1.0;\n    transform: translateX(0%);\n  }\n}\n\n.input-underline {\n  position: absolute;\n  left: 0px;\n  height: 1px;\n  width: 100%;\n  background-color: #858383;\n  animation-name: underlineFadeIn;\n  animation-duration: 0.8s;\n}\n\n.input-block {\n  background-color: transparent;\n  border: 0px;\n  width: 100%;\n  padding: 0px;\n  font-size: 14px;\n  vertical-align: 0px;\n  outline: none;\n  margin-left: 1px;\n}\n\n.input-title-font:disabled {\n  background-color: transparent;\n  width: 60px;\n  opacity: 1;\n  color: #be5035;\n  outline: 0px;\n  padding: 0px;\n  border-width: 0px;\n  font-size: 14px;\n}\n\n.input-tail {\n  height: 14px;\n  margin: 2px;\n}\n\n.gender-block {\n  display: flex;\n  flex-direction: row;\n  align-items: center;\n  width: 70%;\n  height: 25px;\n  padding: 0px;\n  margin-left: 10%;\n  border: 0px;\n  outline: 0px;\n  background: transparent;\n}\n\n.gender-option {\n  background-color: transparent;\n  border-width: 0px;\n  outline: 0px;\n  margin-left: 15px;\n  width: 30px;\n  font-size: 12px;\n}\n\n.adding-underline {\n  height: 1px;\n  width: 70%;\n  margin-top: 10px;\n  background-color: #daa99d;\n}\n\n.save-btn {\n  display: flex;\n  position: relative;\n  justify-content: center;\n  align-items: center;\n  margin-top: 30px;\n  width: 50px;\n  height: 50px;\n  border-radius: 50%;\n  border-width: 0px;\n  outline: 0px;\n  background-color: transparent;\n}\n\n.save-btn:hover {\n  background-color: #df9797;\n  opacity: 0.5;\n}", ""]);
 
 	// exports
 
