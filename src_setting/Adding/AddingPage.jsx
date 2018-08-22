@@ -21,10 +21,15 @@ export default class AddingPage extends Component {
       babyName: "Marco",
       expectedBirthDate: "2019/07/01",
       gender: "女",
+      saveBtnColor: "#f885d6",
     }
+    this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"]
+    this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"]
+    this.boyColor = "#58a6f3";
+    this.girlColor = "#f885d6";
 
     this.inputOnChange = this.inputOnChange.bind(this);
-    this.sendMessege = this.sendMessege.bind(this);
+    this.sendMessage = this.sendMessage.bind(this);
   }
 
 
@@ -35,10 +40,21 @@ export default class AddingPage extends Component {
       prev[cate] = value;
       return newState;
     })
+
+    if (cate == "gender") {
+      let inputGender = event.target.value;
+      if (this.genderBoyWordList.indexOf(inputGender) != -1){
+        console.log("use gender boy");
+        this.setState({saveBtnColor: this.boyColor});
+      } else if (this.genderGirlWordList.indexOf(inputGender) != -1){
+        console.log("use gender girl");
+        this.setState({saveBtnColor: this.girlColor});
+      }
+    }
   }
 
 
-  sendMessege() {
+  sendMessage() {
     let message = `
     寶寶名字：${this.state.babyName}
     預產期：${this.state.expectedBirthDate}
@@ -66,10 +82,10 @@ export default class AddingPage extends Component {
         <Input onChange={this.inputOnChange} value={this.state.expectedBirthDate} title={"預產期"} tail={""} name="expectedBirthDate" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "expectedBirthDate"}/>
         <Input onChange={this.inputOnChange} value={this.state.gender} title={"性別"} tail={""} name="gender" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "gender"}/>
         <div className="adding-underline"></div>
-        <Link className="save-btn" to={{pathname: "/"}} onClick={this.sendMessege}>
+        <Link className="save-btn" to={{pathname: "/"}} onClick={this.sendMessage}>
           <FontAwesomeIcon 
             icon="child"
-            color={"#ee5d8d"}
+            color={this.state.saveBtnColor}
             size="2x"
           />
         </Link>
