@@ -22,6 +22,8 @@ export default class AddingPage extends Component {
       expectedBirthDate: "2019/07/01",
       gender: "女",
       saveBtnColor: "#f885d6",
+      boyOpacity: 0.3,
+      girlOpacity: 1,
     }
     this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"]
     this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"]
@@ -30,6 +32,7 @@ export default class AddingPage extends Component {
 
     this.inputOnChange = this.inputOnChange.bind(this);
     this.saveBtnOnClick = this.saveBtnOnClick.bind(this);
+    this.genderOptionOnClick = this.genderOptionOnClick.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
     this.closeWindow = this.closeWindow.bind(this);
   }
@@ -47,11 +50,21 @@ export default class AddingPage extends Component {
       let inputGender = event.target.value;
       if (this.genderBoyWordList.indexOf(inputGender) != -1){
         console.log("use gender boy");
-        this.setState({saveBtnColor: this.boyColor});
+        this.setState({saveBtnColor: this.boyOpacity});
       } else if (this.genderGirlWordList.indexOf(inputGender) != -1){
         console.log("use gender girl");
-        this.setState({saveBtnColor: this.girlColor});
+        this.setState({saveBtnColor: this.girlOpacity});
       }
+    }
+  }
+
+
+  genderOptionOnClick(gender) {
+    console.log("use")
+    if (gender == "boy") {
+      this.setState({boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor:this.boyColor})
+    } else if (gender == "girl") {
+      this.setState({boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor:this.girlColor})
     }
   }
 
@@ -94,7 +107,12 @@ export default class AddingPage extends Component {
       <div className="adding-page">
         <Input onChange={this.inputOnChange} value={this.state.babyName} title={"寶寶名字"} tail={""} name="babyName" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "babyName"}/>
         <Input onChange={this.inputOnChange} value={this.state.expectedBirthDate} title={"預產期"} tail={""} name="expectedBirthDate" style={{flex: 0.5, maxWidth:150}} parent={this} underlineToggle={this.state.selectedUnderline == "expectedBirthDate"}/>
-        <Input onChange={this.inputOnChange} value={this.state.gender} title={"性別"} tail={""} name="gender" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "gender"}/>
+        {/* <Input onChange={this.inputOnChange} value={this.state.gender} title={"性別"} tail={""} name="gender" style={{width:50}} parent={this} underlineToggle={this.state.selectedUnderline == "gender"}/> */}
+        <div className="gender-block">
+          <input className="input-title-font" disabled={true} value={"性別"} />
+          <button className="gender-option" onClick={() => {this.genderOptionOnClick("boy")}} style={{color:this.boyColor, opacity:this.state.boyOpacity}} >{"男"}</button>
+          <button className="gender-option" onClick={() => {this.genderOptionOnClick("girl")}} style={{color:this.girlColor, opacity:this.state.girlOpacity}}>{"女"}</button>
+        </div>
         <div className="adding-underline"></div>
         <Link className="save-btn" to={{pathname: "/"}} onClick={this.saveBtnOnClick}>
           <FontAwesomeIcon 

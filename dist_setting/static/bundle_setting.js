@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "d07d4b1c479c334c00fd"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "15d219fb82f536dc19b4"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26451,7 +26451,7 @@
 
 
 	// module
-	exports.push([module.id, ".setting-page {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    background-color: #f7dd96;\n}\n\n.setting-block {\n    display: flex;\n    position: relative;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 80%;\n}\n\n\n\n/*** save btn ***/\n.save-button {\n    display: flex;\n    position: relative;\n    align-items: center;\n    justify-content: center;\n    width: 40%;\n    height: 30px;\n    background-color: transparent;\n    border: 0px;\n    outline: 0px;\n  }\n  \n  .save-button:hover {\n    opacity: 0.5;\n  }\n  \n  .save-underline {\n    position: absolute;\n    width: 100%;\n    height: 8px;\n    border-radius: 4px;\n    background-color: #dceaf3;\n  }\n  \n  .save-font-container {\n    display: flex;\n    align-self: center;\n    position: absolute;\n  }\n  \n  .save-font {\n    background-color: transparent;\n    font-size: 20px;\n    color: #927585;\n    border-width: 0px;\n  }", ""]);
+	exports.push([module.id, ".setting-page {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n    height: 100%;\n    background-color: #f7dd96;\n}\n\n.setting-block {\n    display: flex;\n    position: relative;\n    flex-direction: row;\n    justify-content: space-between;\n    width: 80%;\n}\n\n\n\n/*** save btn ***/\n.save-button {\n    display: flex;\n    position: relative;\n    align-items: center;\n    justify-content: center;\n    width: 40%;\n    height: 30px;\n    background-color: transparent;\n    border: 0px;\n    outline: 0px;\n  }\n  \n  .save-button:hover {\n    opacity: 0.5;\n  }\n  \n  .save-underline {\n    position: absolute;\n    width: 100%;\n    height: 8px;\n    border-radius: 4px;\n    background-color: #ffffff;\n  }\n  \n  .save-font-container {\n    display: flex;\n    align-self: center;\n    position: absolute;\n  }\n  \n  .save-font {\n    background-color: transparent;\n    font-size: 20px;\n    color: #927585;\n    border-width: 0px;\n  }", ""]);
 
 	// exports
 

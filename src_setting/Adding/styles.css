@@ -75,7 +75,7 @@
   background-color: transparent;
   width: 60px;
   opacity: 1;
-  color: "#58a6f3";
+  color: #be5035;
   outline: 0px;
   padding: 0px;
   border-width: 0px;
@@ -85,6 +85,28 @@
 .input-tail {
   height: 14px;
   margin: 2px;
+}
+
+.gender-block {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 70%;
+  height: 25px;
+  padding: 0px;
+  margin-left: 10%;
+  border: 0px;
+  outline: 0px;
+  background: transparent;
+}
+
+.gender-option {
+  background-color: transparent;
+  border-width: 0px;
+  outline: 0px;
+  margin-left: 15px;
+  width: 30px;
+  font-size: 12px;
 }
 
 .adding-underline {
