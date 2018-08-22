@@ -104,17 +104,16 @@ export class Input extends Component {
     const tail = this.props.tail;
     const style = this.props.style;
     const underlineToggle = this.props.underlineToggle;
-    const fontOnColor = "#858383";
-    const fontOffColor = "#ffffff";
-    const fontColor = underlineToggle ? fontOnColor : fontOffColor;
+    const fontColor = "#ffffff";
+    const fontOpacity = underlineToggle ? 1 : 0.5;
 
     return(
       <button className="input" onClick={this.onClick}>
         <input className="input-title-font" disabled={true} value={title}></input>
         <div className="input-container" style={style}>
-          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor}} value={value}></input>
-          {underlineToggle ? <div className="input-tail" style={{color: fontOnColor}}>{tail}</div> : null}
-          {underlineToggle ? <div className="input-underline"></div> : null}
+          <input onChange={(e) => {this.props.onChange(e, name)}}  className="input-block" type="text" name={name} style={{color: fontColor, opacity:fontOpacity}} value={value}></input>
+          {underlineToggle ? <div className="input-tail" style={{color: fontColor}}>{tail}</div> : null}
+          {underlineToggle ? <div className="input-underline" style={{backgroundColor: fontColor}}></div> : null}
         </div>
       </button>
     );

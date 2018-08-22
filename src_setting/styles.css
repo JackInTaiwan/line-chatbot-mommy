@@ -18,6 +18,10 @@ body {
     margin: 0px;
 }
 
+div {
+    background-color: transparent;
+}
+
 .container {
     display: flex;
     width: 100%;
