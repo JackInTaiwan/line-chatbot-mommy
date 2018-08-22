@@ -69,10 +69,10 @@ export default class JournalInputView extends Component {
     let message = `
     [ 媽咪手冊 ]
     時間： ${this.state.data.year}/${this.state.data.month}/${this.state.data.date}
-    標題： ${this.state.title}
-    媽咪體重： ${this.state.data.content.momWeight}
-    Baby體重： ${this.state.data.content.babyWeight}
-    Baby身長： ${this.state.data.content.babyHeight}
+    標題： ${this.state.data.title}
+    媽咪體重： ${this.state.data.content.momWeight}kgs
+    Baby體重： ${this.state.data.content.babyWeight}gs
+    Baby身長： ${this.state.data.content.babyHeight}cms
     `
 
     liff.sendMessages([

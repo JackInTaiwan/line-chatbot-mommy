@@ -110,6 +110,12 @@ button {
   }
 }
 
+
+.float-menu {
+  display: flex;
+  flex: 1;
+}
+
 .float-panel {
   display: flex;
   flex-direction: column;
