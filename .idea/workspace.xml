@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89fa709-c464-4d69-9184-743ad1063f44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_setting/Setting/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Setting/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+              <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -34,11 +36,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+            <state relative-caret-position="356">
+              <caret line="37" column="61" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src_setting/Setting/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="371">
+              <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -71,12 +82,13 @@
         <option value="$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py" />
         <option value="$PROJECT_DIR$/line_bot_server/line_bot_server/views.py" />
         <option value="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" />
+        <option value="$PROJECT_DIR$/src_setting/Setting/styles.css" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="330" />
-    <option name="y" value="71" />
+    <option name="x" value="314" />
+    <option name="y" value="49" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -140,10 +152,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="330" y="71" width="1400" height="1000" extended-state="0" />
+    <frame x="314" y="49" width="1400" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.245" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17071429" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -192,7 +204,7 @@
     <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="73" lean-forward="true" selection-start-line="73" selection-end-line="73" />
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
           <folding>
             <element signature="e#0#9#0" expanded="true" />
           </folding>
@@ -201,8 +213,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="355">
-          <caret line="37" column="61" lean-forward="true" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+        <state relative-caret-position="356">
+          <caret line="37" column="61" selection-start-line="37" selection-start-column="61" selection-end-line="37" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src_setting/Setting/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="53" column="17" selection-start-line="53" selection-start-column="17" selection-end-line="53" selection-end-column="17" />
         </state>
       </provider>
     </entry>
