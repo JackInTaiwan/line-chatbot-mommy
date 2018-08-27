@@ -1,5 +1,6 @@
 import os
 import json
+import requests
 
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
@@ -73,3 +74,10 @@ def calendar_item(req):
 
     else:
         return HttpResponse(status=404)
+
+
+
+@csrf_exempt
+def linebot_video_1(req):
+    response = requests.post("https://line-mommy-baby.herokuapp.com/video_1?user_id=U4164c4e164fe4c525a0fd4072243d382")
+    return HttpResponse(status=200)
