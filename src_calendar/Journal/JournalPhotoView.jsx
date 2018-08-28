@@ -120,7 +120,7 @@ export class PhotoBlock extends Component {
             buttonStyles={{width:"100%", height:"100%", margin:0, borderWidth:0, outline: 0, backgroundColor: "transparent"}}
             withIcon={false}
             withLabel={false}
-            imgExtension={['.jpg', '.gif', '.png', '.gif']}
+            imgExtension={['.jpg', '.gif', '.png', '.gif', '.jpeg']}
             maxFileSize={5242880}
             singleImage={true}
           />

@@ -24,7 +24,7 @@ export default class FloatMenu extends Component {
           </Link>
           <Link to="/reminder" className="route-link">
             <div className="cate-container">
-              <button className="cate-button">代辦事項</button>
+              <button className="cate-button">待辦事項</button>
             </div>
           </Link>
           <Link to="/diary" className="route-link">

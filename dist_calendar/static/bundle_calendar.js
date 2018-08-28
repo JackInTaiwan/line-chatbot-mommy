@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c55b9eec7a739496c6e5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a9b0b5a25eae4c2861ac"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -34014,7 +34014,7 @@
 	              _react2.default.createElement(
 	                "button",
 	                { className: "cate-button" },
-	                "\u4EE3\u8FA6\u4E8B\u9805"
+	                "\u5F85\u8FA6\u4E8B\u9805"
 	              )
 	            )
 	          ),
@@ -34448,7 +34448,7 @@
 	            buttonStyles: { width: "100%", height: "100%", margin: 0, borderWidth: 0, outline: 0, backgroundColor: "transparent" },
 	            withIcon: false,
 	            withLabel: false,
-	            imgExtension: ['.jpg', '.gif', '.png', '.gif'],
+	            imgExtension: ['.jpg', '.gif', '.png', '.gif', '.jpeg'],
 	            maxFileSize: 5242880,
 	            singleImage: true
 	          })
