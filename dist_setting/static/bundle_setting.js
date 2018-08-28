@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "ea11d2a761666d846f56"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f592282c5e162aa20cdc"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27128,9 +27128,9 @@
 	    value: function genderOptionOnClick(gender) {
 	      console.log("use");
 	      if (gender == "boy") {
-	        this.setState({ boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor: this.boyColor });
+	        this.setState({ boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor: this.boyColor, gender: "男" });
 	      } else if (gender == "girl") {
-	        this.setState({ boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor: this.girlColor });
+	        this.setState({ boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor: this.girlColor, gender: "女" });
 	      }
 	    }
 	  }, {

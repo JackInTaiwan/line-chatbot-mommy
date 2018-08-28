@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b89fa709-c464-4d69-9184-743ad1063f44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_setting/Setting/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Setting/styles.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,8 +43,8 @@
       <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+            <state relative-caret-position="855">
+              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -176,6 +173,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="658" y="71" width="1150" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2078261" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -252,8 +250,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="34" column="52" selection-start-line="34" selection-start-column="52" selection-end-line="34" selection-end-column="52" />
+        <state relative-caret-position="855">
+          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
         </state>
       </provider>
     </entry>

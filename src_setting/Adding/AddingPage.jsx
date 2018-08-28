@@ -19,7 +19,7 @@ export default class AddingPage extends Component {
     this.state = {
       selectedUnderline: "",
       babyName: "Marco",
-      expectedBirthDate: "2019/07/01",
+      expectedBirthDate: "2019/03/22",
       gender: "女",
       saveBtnColor: "#f885d6",
       boyOpacity: 0.3,
@@ -78,11 +78,19 @@ export default class AddingPage extends Component {
     寶寶名字： ${this.state.babyName}
     預產期： ${this.state.expectedBirthDate}
     性別： ${this.state.gender}
-    `
+    `;
+    let messageNotification = `
+    https://mamibuy.com.tw/pregnancy
+    `;
+
     liff.sendMessages([
       {
         type: 'text',
-        text: message
+        text: message,
+      },
+      {
+        type: 'text',
+        text: messageNotification,
       }
     ])
     .then(() => {
