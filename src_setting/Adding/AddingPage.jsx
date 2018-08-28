@@ -60,9 +60,9 @@ export default class AddingPage extends Component {
   genderOptionOnClick(gender) {
     console.log("use")
     if (gender == "boy") {
-      this.setState({boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor:this.boyColor})
+      this.setState({boyOpacity: 1.0, girlOpacity: 0.3, saveBtnColor:this.boyColor, gender:"男"})
     } else if (gender == "girl") {
-      this.setState({boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor:this.girlColor})
+      this.setState({boyOpacity: 0.3, girlOpacity: 1.0, saveBtnColor:this.girlColor, gender:"女"})
     }
   }
 

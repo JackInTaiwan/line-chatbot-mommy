@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "69637f293d607338687f"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "ea11d2a761666d846f56"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27117,11 +27117,9 @@
 	      if (cate == "gender") {
 	        var inputGender = event.target.value;
 	        if (this.genderBoyWordList.indexOf(inputGender) != -1) {
-	          console.log("use gender boy");
-	          this.setState({ saveBtnColor: this.boyOpacity });
+	          this.setState({ saveBtnColor: this.boyOpacity, gender: "男" });
 	        } else if (this.genderGirlWordList.indexOf(inputGender) != -1) {
-	          console.log("use gender girl");
-	          this.setState({ saveBtnColor: this.girlOpacity });
+	          this.setState({ saveBtnColor: this.girlOpacity, gender: "女" });
 	        }
 	      }
 	    }
