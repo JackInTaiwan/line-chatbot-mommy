@@ -32,7 +32,7 @@ export default class SettingPage extends Component {
         <Link to={{pathname:"/add"}} className="save-button">
           <div className="save-underline"></div>
           <div className="save-font-container">
-              <button className="save-font">{"新增寶寶資訊"}</button>
+              <button className="save-font">{"新增寶寶資料"}</button>
           </div>
         </Link>
         <Link to={{pathname:"/add"}} className="save-button">

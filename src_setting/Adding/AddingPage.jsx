@@ -49,11 +49,9 @@ export default class AddingPage extends Component {
     if (cate == "gender") {
       let inputGender = event.target.value;
       if (this.genderBoyWordList.indexOf(inputGender) != -1){
-        console.log("use gender boy");
-        this.setState({saveBtnColor: this.boyOpacity});
+        this.setState({saveBtnColor: this.boyOpacity, gender:"男"});
       } else if (this.genderGirlWordList.indexOf(inputGender) != -1){
-        console.log("use gender girl");
-        this.setState({saveBtnColor: this.girlOpacity});
+        this.setState({saveBtnColor: this.girlOpacity, gender:"女"});
       }
     }
   }

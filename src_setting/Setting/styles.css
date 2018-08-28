@@ -12,8 +12,8 @@
     display: flex;
     position: relative;
     flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
+    justify-content: space-around;
+    width: 100%;
 }
 
 
@@ -24,7 +24,7 @@
     position: relative;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 40%;
     height: 30px;
     background-color: transparent;
     border: 0px;
