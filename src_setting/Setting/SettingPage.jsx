@@ -9,18 +9,13 @@ import "./styles.css";
 export default class SettingPage extends Component {
 	constructor(props) {
     super(props);
+    this.state = {
+      userId: "",
+    }
   }
 
 
   componentWillMount() {
-    liff.init(
-			data => {
-			  console.log("liff init success...");
-			},
-			error => {
-				console.log("liff init fail...");
-			}
-		);
 	}
   
 

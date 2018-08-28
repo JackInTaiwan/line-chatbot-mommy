@@ -17,6 +17,7 @@ export default class AddingPage extends Component {
     super(props);
 
     this.state = {
+      userId: "",
       selectedUnderline: "",
       babyName: "Marco",
       expectedBirthDate: "2019/03/22",
@@ -25,6 +26,7 @@ export default class AddingPage extends Component {
       boyOpacity: 0.3,
       girlOpacity: 1,
     }
+    this.url = "https://line-mommy-baby.herokuapp.com"
     this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"]
     this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"]
     this.boyColor = "#58a6f3";
@@ -35,6 +37,19 @@ export default class AddingPage extends Component {
     this.genderOptionOnClick = this.genderOptionOnClick.bind(this);
     this.sendMessage = this.sendMessage.bind(this);
     this.closeWindow = this.closeWindow.bind(this);
+  }
+
+
+  componentWillMount() {
+    liff.init(
+			data => {
+        console.log("liff init success...");
+        this.setState({userId: data.context.userId});
+			},
+			error => {
+				console.log("liff init fail...");
+			}
+		);
   }
 
 
@@ -79,24 +94,25 @@ export default class AddingPage extends Component {
     預產期： ${this.state.expectedBirthDate}
     性別： ${this.state.gender}
     `;
-    let messageNotification = 
-    `恭喜媽咪懷孕第十週囉～～
-媽咪要多多照顧自己唷
-https://mamibuy.com.tw/talk/forum/topic/81243`;
 
     liff.sendMessages([
       {
         type: 'text',
         text: message,
       },
-      {
-        type: 'text',
-        text: messageNotification,
-      }
     ])
     .then(() => {
-      console.log('message sent');
-      this.closeWindow();
+      fetch(`${this.url}/setting?user_id=${this.state.userId}`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+      })
+      .then((res) => {
+        this.closeWindow();
+        console.log("API calendar_item [POST]:", res.status);
+      })
     })
     .catch((err) => {
       console.log('error', err);
