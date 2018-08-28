@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c3796bf44daf20dd82f1"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2b21735d8fb4bbc66ab7"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27112,7 +27112,7 @@
 
 	      liff.init(function (data) {
 	        console.log("liff init success...");
-	        _this2.setState({ userId: data.context.userId, babyName: data.context.userId });
+	        _this2.setState({ userId: data.context.userId });
 	      }, function (error) {
 	        console.log("liff init fail...");
 	      });
