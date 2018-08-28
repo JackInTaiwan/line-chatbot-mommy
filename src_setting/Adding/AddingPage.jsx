@@ -79,9 +79,10 @@ export default class AddingPage extends Component {
     預產期： ${this.state.expectedBirthDate}
     性別： ${this.state.gender}
     `;
-    let messageNotification = `
-    https://mamibuy.com.tw/pregnancy
-    `;
+    let messageNotification = 
+    `恭喜媽咪懷孕第十週囉～～
+    媽咪要多多照顧自己唷
+    https://mamibuy.com.tw/talk/forum/topic/81243`;
 
     liff.sendMessages([
       {

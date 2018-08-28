@@ -4,6 +4,7 @@
     <list default="true" id="b89fa709-c464-4d69-9184-743ad1063f44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,10 +24,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1387">
+            <state relative-caret-position="1205">
               <caret line="73" selection-start-line="73" selection-end-line="73" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
@@ -40,7 +41,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="855">
@@ -122,19 +123,13 @@
             <path>
               <item name="line-bot-mommy" type="b2602c69:ProjectViewProjectNode" />
               <item name="line-bot-mommy" type="462c0819:PsiDirectoryNode" />
-              <item name="src_setting" type="462c0819:PsiDirectoryNode" />
+              <item name="line_bot_server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="line-bot-mommy" type="b2602c69:ProjectViewProjectNode" />
               <item name="line-bot-mommy" type="462c0819:PsiDirectoryNode" />
-              <item name="src_setting" type="462c0819:PsiDirectoryNode" />
-              <item name="Adding" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="line-bot-mommy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="line-bot-mommy" type="462c0819:PsiDirectoryNode" />
-              <item name="src_setting" type="462c0819:PsiDirectoryNode" />
-              <item name="Setting" type="462c0819:PsiDirectoryNode" />
+              <item name="line_bot_server" type="462c0819:PsiDirectoryNode" />
+              <item name="line_bot_server" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -175,14 +170,14 @@
     <frame x="658" y="71" width="1150" height="1000" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2078261" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2078261" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.30735457" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.30735457" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -221,16 +216,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1387">
-          <caret line="73" selection-start-line="73" selection-end-line="73" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src_setting/Adding/styles.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -252,6 +237,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
           <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1205">
+          <caret line="73" selection-start-line="73" selection-end-line="73" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f592282c5e162aa20cdc"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "58433712d83eb38e1214"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27085,7 +27085,7 @@
 	    _this.state = {
 	      selectedUnderline: "",
 	      babyName: "Marco",
-	      expectedBirthDate: "2019/07/01",
+	      expectedBirthDate: "2019/03/22",
 	      gender: "女",
 	      saveBtnColor: "#f885d6",
 	      boyOpacity: 0.3,
@@ -27144,9 +27144,14 @@
 	      var _this2 = this;
 
 	      var message = "\n    [ \u57FA\u672C\u8A2D\u5B9A ]\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A " + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A " + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A " + this.state.gender + "\n    ";
+	      var messageNotification = "\n    https://mamibuy.com.tw/pregnancy\n    ";
+
 	      liff.sendMessages([{
 	        type: 'text',
 	        text: message
+	      }, {
+	        type: 'text',
+	        text: messageNotification
 	      }]).then(function () {
 	        console.log('message sent');
 	        _this2.closeWindow();
