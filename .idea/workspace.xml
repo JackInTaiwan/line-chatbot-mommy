@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="b89fa709-c464-4d69-9184-743ad1063f44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line_bot_server/line_bot_server/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/line_bot_server/line_bot_server/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,11 +26,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
+            <state relative-caret-position="469">
+              <caret line="93" column="12" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
               <folding>
                 <element signature="e#0#9#0" expanded="true" />
               </folding>
@@ -43,8 +46,8 @@
       <file leaf-file-name="SettingPage.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="855">
-              <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
+            <state relative-caret-position="760">
+              <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -67,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="316">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+              <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
               <folding>
                 <element signature="e#639#671#0" expanded="true" />
               </folding>
@@ -95,8 +98,8 @@
       <list>
         <option value="$PROJECT_DIR$/src_setting/Setting/styles.css" />
         <option value="$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx" />
-        <option value="$PROJECT_DIR$/line_bot_server/line_bot_server/views.py" />
         <option value="$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py" />
+        <option value="$PROJECT_DIR$/line_bot_server/line_bot_server/views.py" />
       </list>
     </option>
   </component>
@@ -275,27 +278,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src_setting/Setting/SettingPage.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="45" column="6" selection-start-line="45" selection-start-column="6" selection-end-line="45" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#9#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="760">
+          <caret line="40" column="6" selection-start-line="40" selection-start-column="6" selection-end-line="40" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
           <folding>
             <element signature="e#639#671#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/line_bot_server/line_bot_server/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="93" column="12" lean-forward="true" selection-start-line="93" selection-start-column="12" selection-end-line="93" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -88,3 +88,10 @@ def linebot_video_1(req):
 def linebot_video_2(req):
     response = requests.post("https://line-mommy-baby.herokuapp.com/video_2?user_id=U4164c4e164fe4c525a0fd4072243d382")
     return HttpResponse(status=200)
+
+
+
+@csrf_exempt
+def congra(req):
+    response = requests.post("https://line-mommy-baby.herokuapp.com/congra?user_id=U4164c4e164fe4c525a0fd4072243d382")
+    return HttpResponse(status=200)

@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cb6af0325bcdccf8c805"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "c3796bf44daf20dd82f1"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -26333,18 +26333,17 @@
 	  function SettingPage(props) {
 	    _classCallCheck(this, SettingPage);
 
-	    return _possibleConstructorReturn(this, (SettingPage.__proto__ || Object.getPrototypeOf(SettingPage)).call(this, props));
+	    var _this = _possibleConstructorReturn(this, (SettingPage.__proto__ || Object.getPrototypeOf(SettingPage)).call(this, props));
+
+	    _this.state = {
+	      userId: ""
+	    };
+	    return _this;
 	  }
 
 	  _createClass(SettingPage, [{
 	    key: "componentWillMount",
-	    value: function componentWillMount() {
-	      liff.init(function (data) {
-	        console.log("liff init success...");
-	      }, function (error) {
-	        console.log("liff init fail...");
-	      });
-	    }
+	    value: function componentWillMount() {}
 	  }, {
 	    key: "render",
 	    value: function render() {
@@ -27083,6 +27082,7 @@
 	    var _this = _possibleConstructorReturn(this, (AddingPage.__proto__ || Object.getPrototypeOf(AddingPage)).call(this, props));
 
 	    _this.state = {
+	      userId: "",
 	      selectedUnderline: "",
 	      babyName: "Marco",
 	      expectedBirthDate: "2019/03/22",
@@ -27091,6 +27091,7 @@
 	      boyOpacity: 0.3,
 	      girlOpacity: 1
 	    };
+	    _this.url = "https://line-mommy-baby.herokuapp.com";
 	    _this.genderBoyWordList = ["boy", "male", "man", "男", "男孩", "男性"];
 	    _this.genderGirlWordList = ["girl", "female", "woman", "女", "女孩", "女性"];
 	    _this.boyColor = "#58a6f3";
@@ -27105,6 +27106,18 @@
 	  }
 
 	  _createClass(AddingPage, [{
+	    key: "componentWillMount",
+	    value: function componentWillMount() {
+	      var _this2 = this;
+
+	      liff.init(function (data) {
+	        console.log("liff init success...");
+	        _this2.setState({ userId: data.context.userId, babyName: data.context.userId });
+	      }, function (error) {
+	        console.log("liff init fail...");
+	      });
+	    }
+	  }, {
 	    key: "inputOnChange",
 	    value: function inputOnChange(event, cate) {
 	      var value = event.target.value;
@@ -27141,20 +27154,24 @@
 	  }, {
 	    key: "sendMessage",
 	    value: function sendMessage() {
-	      var _this2 = this;
+	      var _this3 = this;
 
 	      var message = "\n    [ \u57FA\u672C\u8A2D\u5B9A ]\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A " + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A " + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A " + this.state.gender + "\n    ";
-	      var messageNotification = "\u606D\u559C\u5ABD\u54AA\u61F7\u5B55\u7B2C\u5341\u9031\u56C9\uFF5E\uFF5E\n\u5ABD\u54AA\u8981\u591A\u591A\u7167\u9867\u81EA\u5DF1\u5537\nhttps://mamibuy.com.tw/talk/forum/topic/81243";
 
 	      liff.sendMessages([{
 	        type: 'text',
 	        text: message
-	      }, {
-	        type: 'text',
-	        text: messageNotification
 	      }]).then(function () {
-	        console.log('message sent');
-	        _this2.closeWindow();
+	        fetch(_this3.url + "/setting?user_id=" + _this3.state.userId, {
+	          method: 'POST',
+	          headers: {
+	            'Accept': 'application/json',
+	            'Content-Type': 'application/json'
+	          }
+	        }).then(function (res) {
+	          _this3.closeWindow();
+	          console.log("API calendar_item [POST]:", res.status);
+	        });
 	      }).catch(function (err) {
 	        console.log('error', err);
 	      });
@@ -27167,7 +27184,7 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      return _react2.default.createElement(
 	        "div",
@@ -27181,14 +27198,14 @@
 	          _react2.default.createElement(
 	            "button",
 	            { className: "gender-option", onClick: function onClick() {
-	                _this3.genderOptionOnClick("boy");
+	                _this4.genderOptionOnClick("boy");
 	              }, style: { color: this.boyColor, opacity: this.state.boyOpacity } },
 	            "男"
 	          ),
 	          _react2.default.createElement(
 	            "button",
 	            { className: "gender-option", onClick: function onClick() {
-	                _this3.genderOptionOnClick("girl");
+	                _this4.genderOptionOnClick("girl");
 	              }, style: { color: this.girlColor, opacity: this.state.girlOpacity } },
 	            "女"
 	          )
@@ -27218,27 +27235,27 @@
 	  function Input(props) {
 	    _classCallCheck(this, Input);
 
-	    var _this4 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
+	    var _this5 = _possibleConstructorReturn(this, (Input.__proto__ || Object.getPrototypeOf(Input)).call(this, props));
 
-	    _this4.onClick = _this4.onClick.bind(_this4);
-	    return _this4;
+	    _this5.onClick = _this5.onClick.bind(_this5);
+	    return _this5;
 	  }
 
 	  _createClass(Input, [{
 	    key: "onClick",
 	    value: function onClick() {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      this.props.parent.setState(function (prev) {
 	        var newState = prev;
-	        newState.selectedUnderline = _this5.props.name;
+	        newState.selectedUnderline = _this6.props.name;
 	        return newState;
 	      });
 	    }
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var _this6 = this;
+	      var _this7 = this;
 
 	      var name = this.props.name;
 	      var title = this.props.title;
@@ -27257,7 +27274,7 @@
 	          "div",
 	          { className: "input-container", style: style },
 	          _react2.default.createElement("input", { onChange: function onChange(e) {
-	              _this6.props.onChange(e, name);
+	              _this7.props.onChange(e, name);
 	            }, className: "input-block", type: "text", name: name, style: { color: fontColor, opacity: fontOpacity }, value: value }),
 	          underlineToggle ? _react2.default.createElement(
 	            "div",

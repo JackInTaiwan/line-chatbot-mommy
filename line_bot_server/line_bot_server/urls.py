@@ -17,13 +17,14 @@ from django.contrib import admin
 from django.urls import path, re_path
 from .views import render_html, render_root
 from .views import calendar_item
-from .views import linebot_video_1, linebot_video_2
+from .views import linebot_video_1, linebot_video_2, congra
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", render_root),
     path("demo_video_1", linebot_video_1),
     path("demo_video_2", linebot_video_2),
+    path("congra", congra),
     path("calendar/calendar_item", calendar_item),
     path("<str:index>", render_html),
 
