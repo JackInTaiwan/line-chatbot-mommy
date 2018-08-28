@@ -65,7 +65,7 @@
 /******/ 	}
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "58433712d83eb38e1214"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "782b889083fd963c6d9e"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -27144,7 +27144,7 @@
 	      var _this2 = this;
 
 	      var message = "\n    [ \u57FA\u672C\u8A2D\u5B9A ]\n    \u5BF6\u5BF6\u540D\u5B57\uFF1A " + this.state.babyName + "\n    \u9810\u7522\u671F\uFF1A " + this.state.expectedBirthDate + "\n    \u6027\u5225\uFF1A " + this.state.gender + "\n    ";
-	      var messageNotification = "\n    https://mamibuy.com.tw/pregnancy\n    ";
+	      var messageNotification = "\u606D\u559C\u5ABD\u54AA\u61F7\u5B55\u7B2C\u5341\u9031\u56C9\uFF5E\uFF5E\n    \u5ABD\u54AA\u8981\u591A\u591A\u7167\u9867\u81EA\u5DF1\u5537\n    https://mamibuy.com.tw/talk/forum/topic/81243";
 
 	      liff.sendMessages([{
 	        type: 'text',

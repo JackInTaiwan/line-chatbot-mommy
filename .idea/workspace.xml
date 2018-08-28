@@ -4,7 +4,6 @@
     <list default="true" id="b89fa709-c464-4d69-9184-743ad1063f44" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/bundle_setting.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist_setting/static/vendor_setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src_setting/Adding/AddingPage.jsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
