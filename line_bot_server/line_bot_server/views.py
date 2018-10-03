@@ -11,7 +11,7 @@ from pymongo import MongoClient
 
 
 """ Parameters """
-mongodb_url = "mongodb://jack_shiba:friends10439@ds125602.mlab.com:25602/line-bot-mommy"
+mongodb_url = "mongodb://username:passwd@ds125602.mlab.com:25602/line-bot-mommy"
 
 
 
